@@ -1,0 +1,109 @@
+{{ define "main" }}
+<!-- Post Header -->
+<div class="post-header">
+  <div class="post-header-container">
+    {{ with .Params.categories }}
+    <a href="/categories/{{ index . 0 | urlize }}/" class="post-category-link">{{ index . 0 }}</a>
+    {{ end }}
+    <h1>{{ .Title }}</h1>
+    <div class="post-meta">
+      <span>{{ .Date.Format "January 2, 2006" }}</span>
+      <span class="meta-sep">·</span>
+      <span>{{ .ReadingTime }} min read</span>
+    </div>
+  </div>
+</div>
+
+{{ with .Params.featured_image }}
+<div class="post-featured-image">
+  <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy">
+</div>
+{{ end }}
+
+<!-- Post Body -->
+<div class="post-body">
+  <article class="post-content-wrap">
+    {{ .Content }}
+
+    <!-- FAQ Section -->
+    {{ if .Params.faq }}
+    <div class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+      {{ range .Params.faq }}
+      <div class="faq-item">
+        <h3 class="faq-question">{{ .question }}</h3>
+        <div class="faq-answer"><p>{{ .answer }}</p></div>
+      </div>
+      {{ end }}
+    </div>
+    {{ end }}
+
+    <!-- Post CTA -->
+    <div class="post-cta">
+      <h3>Ready to Help Your Child Talk?</h3>
+      <p>AI-powered speech therapy for $30/month — or pre-order the world's first AI glasses for kids at $179.</p>
+      <div class="post-cta-buttons">
+        <a href="/#app" class="btn btn-primary">📱 See the App</a>
+        <a href="/#pledge" class="btn btn-secondary">🚀 Back the Glasses</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- Sidebar -->
+  <aside class="post-sidebar">
+    <div class="sidebar-card">
+      <h4>🚀 Back This Project</h4>
+      <p>Pre-order AI Glasses for Kids — $179. Production begins at $10K goal.</p>
+      <a href="/#pledge" class="btn btn-primary btn-full">Pre-Order Now</a>
+    </div>
+
+    <div class="sidebar-card">
+      <h4>📱 Speech Therapy App</h4>
+      <p>AI-powered speech coaching for toddlers. $30/month — unlimited sessions.</p>
+      <div class="store-coming-soon sidebar-store">
+        <span class="store-icon">▶</span>
+        <div>
+          <small>Coming Soon</small>
+          <strong>Google Play</strong>
+        </div>
+      </div>
+    </div>
+
+    {{ with .Params.tags }}
+    <div class="sidebar-card">
+      <h4>Tags</h4>
+      <div class="sidebar-tags">
+        {{ range . }}
+        <a href="/tags/{{ . | urlize }}/" class="tag">{{ . }}</a>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+  </aside>
+</div>
+
+<!-- Related Posts -->
+{{ $related := .Site.RegularPages.Related . | first 3 }}
+{{ with $related }}
+<div class="related-posts">
+  <div class="section-container">
+    <h2>Related <span class="gradient-text">Articles</span></h2>
+    <div class="posts-grid">
+      {{ range . }}
+      <a href="{{ .Permalink }}" class="post-card">
+        {{ with .Params.featured_image }}
+        <div class="post-image" style="background-image: url('{{ . }}')"></div>
+        {{ end }}
+        <div class="post-content">
+          {{ with .Params.categories }}<span class="post-category">{{ index . 0 }}</span>{{ end }}
+          <h3>{{ .Title }}</h3>
+          <p>{{ .Description }}</p>
+          <span class="post-date">{{ .Date.Format "January 2, 2006" }}</span>
+        </div>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</div>
+{{ end }}
+{{ end }}

@@ -1,0 +1,19 @@
+<header class="site-header" id="site-header">
+  <div class="header-container">
+    <a href="/" class="logo" aria-label="AI Kid Therapy Home">
+      <span class="logo-icon">🧒</span>
+      <span class="logo-text">AI<span class="logo-accent">KID</span>THERAPY</span>
+    </a>
+    <nav class="main-nav" id="main-nav" aria-label="Main Navigation">
+      {{ range .Site.Menus.main }}
+        <a href="{{ .URL }}" class="nav-link {{ if $.IsMenuCurrent "main" . }}active{{ end }}">{{ .Name }}</a>
+      {{ end }}
+    </nav>
+    <a href="#pledge" class="header-cta" id="header-cta">
+      🚀 Back This Project
+    </a>
+    <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
