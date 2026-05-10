@@ -1,3 +1,13 @@
+---
+title: "Understanding and Treating Voice Disorders in Pediatric Speech Therapy"
+date: 2026-05-10T17:00:00Z
+slug: 2026-05-10-voice-disorders
+description: "A comprehensive guide for parents and therapists on identifying, understanding, and treating voice disorders in children, including evidence-based strategies."
+categories: ["Speech Therapy"]
+tags: ["voice-disorders", "speech therapy", "pediatric"]
+draft: false
+---
+
 # Understanding and Treating Voice Disorders in Pediatric Speech Therapy
 
 ## Introduction
