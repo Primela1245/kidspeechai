@@ -20,12 +20,12 @@ enableEmoji = true
     lineNos = false
 
 [params]
-  description = "AI-powered speech therapy app for toddlers ($14.99/month) and the world's first AI glasses for kids. Affordable speech therapy at home for 3-5 year olds with speech delay, autism, and vocabulary building. Download on Google Play."
+  description = "AI-powered speech therapy app for toddlers ($30/month) and the world's first AI glasses for kids. Affordable speech therapy at home for 3-5 year olds with speech delay, autism, and vocabulary building. Download on Google Play."
   author = "AI Kid Therapy"
   tagline = "AI-Powered Speech Therapy & Smart Glasses for Kids"
   logo = "/images/logo.svg"
   ogImage = "/images/og-default.jpg"
-  appPrice = "$14.99/month"
+  appPrice = "$30/month"
   glassesPrice = "$179"
   fundingGoal = 10000
   fundingCurrent = 0
