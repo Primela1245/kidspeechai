@@ -145,7 +145,7 @@ h1,h2,h3,h4{font-family:var(--font-heading);line-height:1.2;font-weight:800}
 .funding-meta{display:flex;justify-content:space-between;color:var(--text-muted);font-size:.9rem}
 .backer-count strong{color:var(--text-primary)}
 .funding-status{color:var(--accent2)}
-.pledge-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.pledge-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:900px;margin:0 auto}
 .pledge-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px 28px;position:relative;transition:all .3s}
 .pledge-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
 .pledge-featured{border-color:var(--accent);box-shadow:0 0 40px rgba(139,92,246,.15)}
