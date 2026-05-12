@@ -1,75 +1,68 @@
-baseURL = "https://aikidtherapy.com/"
+baseURL = "https://kidspeechai.com/"
 defaultContentLanguage = "en"
 
 [languages]
-  [languages.en]
-    locale = "en-US"
-title = "AI Kid Therapy — AI-Powered Speech Therapy & Smart Glasses for Kids"
+[languages.en]
+locale = "en-US"
+title = "Kid Speech AI — Speech Practice for Toddlers"
 enableRobotsTXT = true
 enableEmoji = true
 
 [pagination]
-  pagerSize = 12
+pagerSize = 12
 
 [markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
-  [markup.highlight]
-    codeFences = true
-    lineNos = false
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true
+[markup.highlight]
+codeFences = true
+lineNos = false
 
 [params]
-  description = "AI-powered speech therapy app for toddlers ($30/month) and the world's first AI glasses for kids. Affordable speech therapy at home for 3-5 year olds with speech delay, autism, and vocabulary building. Download on Google Play."
-  author = "AI Kid Therapy"
-  tagline = "AI-Powered Speech Therapy & Smart Glasses for Kids"
-  logo = "/images/logo.svg"
-  ogImage = "/images/og-default.jpg"
-  appPrice = "$30/month"
-  glassesPrice = "$179"
-  fundingGoal = 10000
-  fundingCurrent = 0
-  backerCount = 0
+description = "Kid Speech AI is a fun AI speech-practice app for toddlers ages 3-5. Build vocabulary every day for $30/month with a 7-day free trial. Available on Google Play."
+author = "Kid Speech AI"
+tagline = "Speech Practice for Toddlers"
+logo = "/images/logo.svg"
+ogImage = "/images/og-default.jpg"
+appPrice = "$30/month"
 
-  # SEO
-  googleAnalytics = ""
+# SEO
+googleAnalytics = ""
 
-  # Product links
-  playStoreUrl = ""
-  stripeGlassesUrl = "YOUR_STRIPE_PAYMENT_LINK"
+# Product links
+playStoreUrl = ""
+
+# Contact
+supportEmail = "support@kidspeechai.com"
 
 [taxonomies]
-  category = "categories"
-  tag = "tags"
+category = "categories"
+tag = "tags"
 
 [outputs]
-  home = ["HTML", "RSS"]
-  section = ["HTML", "RSS"]
+home = ["HTML", "RSS"]
+section = ["HTML", "RSS"]
 
 [sitemap]
-  changefreq = "daily"
-  filename = "sitemap.xml"
-  priority = 0.5
+changefreq = "daily"
+filename = "sitemap.xml"
+priority = 0.5
 
 [permalinks]
-  blog = "/blog/:slug/"
+blog = "/blog/:slug/"
 
 [[menu.main]]
-  name = "Home"
-  url = "/"
-  weight = 1
+name = "Home"
+url = "/"
+weight = 1
 
 [[menu.main]]
-  name = "App"
-  url = "/#app"
-  weight = 2
+name = "App"
+url = "/#app"
+weight = 2
 
 [[menu.main]]
-  name = "Glasses"
-  url = "/#glasses"
-  weight = 3
-
-[[menu.main]]
-  name = "Blog"
-  url = "/blog/"
-  weight = 4
+name = "Blog"
+url = "/blog/"
+weight = 3
