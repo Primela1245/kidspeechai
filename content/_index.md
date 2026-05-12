@@ -1,4 +1,4 @@
 ---
-title: "AI Kid Therapy — AI-Powered Speech Therapy & Smart Glasses for Kids"
-description: "Affordable AI speech therapy app for toddlers ($30/month) and the world's first AI glasses for kids ($179). Speech therapy at home for 3-5 year olds."
+title: "Kid Speech AI — Speech Practice for Toddlers"
+description: "Fun AI speech practice for toddlers ages 3-5. Build vocabulary every day for $30/month with a 7-day free trial. Available on Google Play."
 ---
