@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Delete Account — Kid Speech AI</title>
+  <meta name="description" content="Request deletion of your Kid Speech AI account and data." />
+  <link rel="canonical" href="https://kidspeechai.com/delete-account/" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🗣️%3C/text%3E%3C/svg%3E" />
+  <style>
+    *,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --primary: #6366F1; --primary-dark: #4F46E5; --text: #1F2937; --text-muted: #6B7280; --bg-soft: #F9FAFB; --border: #E5E7EB; --danger: #DC2626; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: var(--text); line-height: 1.7; }
+    .container { max-width: 720px; margin: 0 auto; padding: 24px; }
+    header { border-bottom: 1px solid var(--border); padding: 16px 0; background: white; position: sticky; top: 0; }
+    header .container { display: flex; align-items: center; justify-content: space-between; padding: 0 24px; max-width: 1140px; }
+    .logo { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 18px; color: var(--text); text-decoration: none; }
+    .logo .emoji { font-size: 26px; }
+    .back { color: var(--primary); text-decoration: none; font-weight: 500; font-size: 15px; }
+    .back:hover { text-decoration: underline; }
+    h1 { font-size: 36px; font-weight: 800; margin: 40px 0 8px; letter-spacing: -0.02em; }
+    .lead { color: var(--text-muted); margin-bottom: 32px; font-size: 17px; }
+    h2 { font-size: 22px; font-weight: 700; margin: 32px 0 12px; }
+    p, ul, ol { margin-bottom: 16px; }
+    ul, ol { padding-left: 24px; }
+    li { margin-bottom: 6px; }
+    a { color: var(--primary); }
+    .note { background: var(--bg-soft); border-left: 4px solid var(--primary); padding: 16px 20px; border-radius: 6px; margin: 20px 0; }
+    .danger-note { background: #FEF2F2; border-left: 4px solid var(--danger); padding: 16px 20px; border-radius: 6px; margin: 20px 0; }
+    .danger-note strong { color: var(--danger); }
+    .form-card {
+      background: white; border: 1px solid var(--border); border-radius: 12px;
+      padding: 32px; margin-top: 32px; box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+    label { display: block; font-weight: 600; margin-bottom: 8px; font-size: 15px; }
+    input, textarea {
+      width: 100%; padding: 12px 14px; border: 1px solid var(--border); border-radius: 8px;
+      font-size: 16px; font-family: inherit; margin-bottom: 20px;
+    }
+    input:focus, textarea:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(99,102,241,0.15); }
+    textarea { min-height: 100px; resize: vertical; }
+    button {
+      background: var(--primary); color: white; border: none; padding: 14px 28px;
+      border-radius: 8px; font-weight: 600; font-size: 16px; cursor: pointer;
+      transition: background 0.2s;
+    }
+    button:hover { background: var(--primary-dark); }
+    .alt-method {
+      margin-top: 32px; padding: 20px; background: var(--bg-soft); border-radius: 8px;
+      font-size: 15px; color: var(--text-muted);
+    }
+    .alt-method strong { color: var(--text); }
+    footer { background: var(--bg-soft); padding: 32px 0; margin-top: 64px; text-align: center; color: var(--text-muted); font-size: 14px; border-top: 1px solid var(--border); }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <a href="/" class="logo"><span class="emoji">🗣️</span><span>Kid Speech AI</span></a>
+    <a href="/" class="back">← Home</a>
+  </div>
+</header>
+
+<div class="container">
+  <h1>Delete your account</h1>
+  <p class="lead">You can request deletion of your Kid Speech AI account and all associated data — no app install required.</p>
+
+  <h2>What gets deleted</h2>
+  <ul>
+    <li>Your parent account, including email and account settings</li>
+    <li>All child profiles linked to your account</li>
+    <li>Vocabulary progress logs and weekly summaries</li>
+    <li>Any voice-recognition usage data</li>
+    <li>Support correspondence (we keep anonymized basic records for tax purposes only)</li>
+  </ul>
+
+  <div class="danger-note">
+    <strong>This cannot be undone.</strong> Once we process your deletion request, your data is permanently removed within 30 days and cannot be recovered.
+  </div>
+
+  <h2>What you should do first</h2>
+  <p>If you have an active subscription, cancel it in the Google Play Store <strong>before</strong> requesting deletion. Account deletion does not automatically cancel your Google Play subscription. To cancel: open Google Play → tap your profile → Payments & subscriptions → Subscriptions → Kid Speech AI → Cancel subscription.</p>
+
+  <h2>Request deletion</h2>
+
+  <div class="form-card">
+    <form action="mailto:support@kidspeechai.com" method="post" enctype="text/plain">
+      <label for="email">Account email</label>
+      <input type="email" id="email" name="Account email" required placeholder="parent@example.com" />
+
+      <label for="confirm">Type DELETE to confirm</label>
+      <input type="text" id="confirm" name="Confirmation" required placeholder="DELETE" pattern="DELETE" />
+
+      <label for="reason">Reason (optional)</label>
+      <textarea id="reason" name="Reason" placeholder="Help us improve — why are you leaving? (optional)"></textarea>
+
+      <button type="submit">Send Deletion Request</button>
+    </form>
+  </div>
+
+  <div class="alt-method">
+    <strong>Prefer email?</strong> Email <a href="mailto:support@kidspeechai.com?subject=Account%20Deletion%20Request">support@kidspeechai.com</a> with the subject 'Account Deletion Request' and include the email you used to sign up. We'll confirm receipt within 3 business days and complete the deletion within 30 days.
+  </div>
+
+  <h2>What happens next</h2>
+  <ol>
+    <li>We'll confirm receipt of your request within 3 business days.</li>
+    <li>For security, we may ask you to verify the request from the email on file.</li>
+    <li>We complete deletion within 30 days of verification.</li>
+    <li>You'll receive a final confirmation email when deletion is complete.</li>
+  </ol>
+
+  <p style="margin-top: 32px;">Questions? Email <a href="mailto:support@kidspeechai.com">support@kidspeechai.com</a>.</p>
+</div>
+
+<footer>
+  <p>© 2026 Kid Speech AI · <a href="/" style="color: var(--primary);">Home</a> · <a href="/privacy/" style="color: var(--primary);">Privacy</a> · <a href="/terms/" style="color: var(--primary);">Terms</a></p>
+</footer>
+
+</body>
+                           </html>
