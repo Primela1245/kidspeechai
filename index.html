@@ -1,251 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kid Speech AI — Speech Practice for Toddlers</title>
-  <meta name="description" content="Fun AI speech practice for toddlers ages 3-5. Build vocabulary every day for $30/month with a 7-day free trial. Available on Google Play." />
-  <meta name="author" content="Kid Speech AI" />
-  <link rel="canonical" href="https://kidspeechai.com/" />
-  <meta property="og:title" content="Kid Speech AI — Speech Practice for Toddlers" />
-  <meta property="og:description" content="Fun AI speech practice for toddlers ages 3-5. $30/month with a 7-day free trial." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://kidspeechai.com/" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🗣️%3C/text%3E%3C/svg%3E" />
-  <style>
-    *,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --primary: #6366F1;
-      --primary-dark: #4F46E5;
-      --accent: #F59E0B;
-      --accent-dark: #D97706;
-      --text: #1F2937;
-      --text-muted: #6B7280;
-      --bg: #ffffff;
-      --bg-soft: #F9FAFB;
-      --bg-card: #ffffff;
-      --border: #E5E7EB;
-      --success: #10B981;
-      --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
-      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.06);
-      --shadow-lg: 0 20px 25px -5px rgba(0,0,0,0.08), 0 8px 10px -6px rgba(0,0,0,0.05);
-      --radius: 12px;
-      --radius-lg: 20px;
-    }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, sans-serif;
-      color: var(--text);
-      background: var(--bg);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-    .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
-    a { color: var(--primary); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    header {
-      position: sticky; top: 0; z-index: 50;
-      background: rgba(255,255,255,0.85);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-    }
-    .nav {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 16px 0;
-    }
-    .logo {
-      display: flex; align-items: center; gap: 10px;
-      font-weight: 700; font-size: 20px; color: var(--text);
-    }
-    .logo span.emoji { font-size: 28px; }
-    .nav-links { display: flex; gap: 32px; align-items: center; }
-    .nav-links a { color: var(--text); font-weight: 500; font-size: 15px; }
-    .nav-cta {
-      background: var(--primary); color: white !important;
-      padding: 10px 20px; border-radius: 8px; font-weight: 600;
-      transition: background 0.2s;
-    }
-    .nav-cta:hover { background: var(--primary-dark); text-decoration: none; }
-    @media (max-width: 640px) { .nav-links a:not(.nav-cta) { display: none; } }
-
-    .hero {
-      padding: 80px 0 100px;
-      background: linear-gradient(180deg, #F5F3FF 0%, #ffffff 100%);
-      text-align: center;
-    }
-    .hero h1 {
-      font-size: clamp(36px, 6vw, 56px);
-      font-weight: 800;
-      line-height: 1.1;
-      letter-spacing: -0.02em;
-      margin-bottom: 24px;
-    }
-    .hero h1 span.accent { color: var(--primary); }
-    .hero p.subtitle {
-      font-size: 20px; color: var(--text-muted);
-      max-width: 640px; margin: 0 auto 40px;
-    }
-    .hero-cta { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-    .btn {
-      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-      padding: 14px 28px; border-radius: 10px;
-      font-weight: 600; font-size: 16px;
-      transition: all 0.2s; text-decoration: none !important;
-      border: 2px solid transparent; cursor: pointer;
-    }
-    .btn-primary { background: var(--primary); color: white; }
-    .btn-primary:hover { background: var(--primary-dark); transform: translateY(-1px); box-shadow: var(--shadow-md); }
-    .btn-secondary { background: white; color: var(--text); border-color: var(--border); }
-    .btn-secondary:hover { border-color: var(--primary); color: var(--primary); }
-    .hero-badges {
-      display: flex; gap: 24px; justify-content: center; flex-wrap: wrap;
-      margin-top: 40px; color: var(--text-muted); font-size: 14px;
-    }
-    .hero-badges span { display: flex; align-items: center; gap: 6px; }
-
-    section.block { padding: 80px 0; }
-    section.block.alt { background: var(--bg-soft); }
-    .section-head { text-align: center; max-width: 720px; margin: 0 auto 56px; }
-    .section-head .eyebrow {
-      display: inline-block; font-size: 13px; font-weight: 700;
-      letter-spacing: 0.08em; text-transform: uppercase;
-      color: var(--primary); margin-bottom: 12px;
-    }
-    .section-head h2 {
-      font-size: clamp(28px, 4vw, 40px); font-weight: 800;
-      letter-spacing: -0.02em; line-height: 1.2; margin-bottom: 16px;
-    }
-    .section-head p { font-size: 18px; color: var(--text-muted); }
-
-    .stats {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 24px; margin-top: 24px;
-    }
-    .stat {
-      background: white; padding: 32px 24px; border-radius: var(--radius);
-      border: 1px solid var(--border); text-align: center;
-    }
-    .stat .num { font-size: 36px; font-weight: 800; color: var(--primary); line-height: 1; }
-    .stat .label { color: var(--text-muted); margin-top: 8px; font-size: 14px; }
-
-    .features {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
-    }
-    .feature {
-      background: white; border-radius: var(--radius); padding: 28px;
-      border: 1px solid var(--border); transition: all 0.2s;
-    }
-    .feature:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
-    .feature .icon {
-      width: 48px; height: 48px; border-radius: 12px;
-      background: linear-gradient(135deg, #EEF2FF, #E0E7FF);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 24px; margin-bottom: 16px;
-    }
-    .feature h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
-    .feature p { color: var(--text-muted); font-size: 15px; }
-
-    .steps {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 32px; align-items: start;
-    }
-    .step { text-align: center; }
-    .step .num-circle {
-      width: 56px; height: 56px; border-radius: 50%;
-      background: var(--primary); color: white;
-      display: flex; align-items: center; justify-content: center;
-      font-weight: 800; font-size: 22px; margin: 0 auto 20px;
-    }
-    .step h3 { font-size: 20px; font-weight: 700; margin-bottom: 10px; }
-    .step p { color: var(--text-muted); font-size: 15px; }
-
-    .pricing-wrap { display: flex; justify-content: center; }
-    .pricing-card {
-      background: white; max-width: 480px; width: 100%;
-      border: 2px solid var(--primary); border-radius: var(--radius-lg);
-      padding: 40px; text-align: center; box-shadow: var(--shadow-lg);
-    }
-    .pricing-card .price-label { color: var(--primary); font-weight: 600; margin-bottom: 8px; }
-    .pricing-card .price { font-size: 52px; font-weight: 800; letter-spacing: -0.02em; }
-    .pricing-card .price small { font-size: 18px; color: var(--text-muted); font-weight: 500; }
-    .pricing-card .trial { color: var(--success); font-weight: 600; margin: 8px 0 28px; }
-    .pricing-card ul { list-style: none; text-align: left; margin-bottom: 32px; }
-    .pricing-card ul li {
-      padding: 8px 0; color: var(--text); display: flex; align-items: flex-start; gap: 10px;
-    }
-    .pricing-card ul li::before {
-      content: "✓"; color: var(--success); font-weight: 800; font-size: 18px;
-      flex-shrink: 0;
-    }
-    .pricing-card .play-btn {
-      background: #000; color: white;
-      padding: 16px 24px; border-radius: 10px; font-weight: 600;
-      display: inline-flex; align-items: center; gap: 10px;
-      text-decoration: none !important;
-    }
-    .pricing-card .play-btn:hover { background: #1F2937; }
-
-    .faq { max-width: 760px; margin: 0 auto; }
-    details {
-      background: white; border: 1px solid var(--border);
-      border-radius: var(--radius); margin-bottom: 12px;
-      padding: 0; overflow: hidden;
-    }
-    details summary {
-      padding: 20px 24px; cursor: pointer; font-weight: 600;
-      list-style: none; position: relative; font-size: 16px;
-    }
-    details summary::-webkit-details-marker { display: none; }
-    details summary::after {
-      content: "+"; position: absolute; right: 24px; top: 50%;
-      transform: translateY(-50%); font-size: 24px; color: var(--primary);
-      transition: transform 0.2s;
-    }
-    details[open] summary::after { transform: translateY(-50%) rotate(45deg); }
-    details .answer {
-      padding: 0 24px 20px; color: var(--text-muted); line-height: 1.7;
-    }
-
-    .final-cta {
-      background: linear-gradient(135deg, var(--primary) 0%, #8B5CF6 100%);
-      color: white; padding: 80px 32px; text-align: center;
-      border-radius: var(--radius-lg); margin: 40px 0;
-    }
-    .final-cta h2 { font-size: clamp(28px, 4vw, 40px); font-weight: 800; margin-bottom: 16px; }
-    .final-cta p { font-size: 18px; opacity: 0.95; margin-bottom: 32px; max-width: 540px; margin-left: auto; margin-right: auto; }
-    .final-cta .btn-primary { background: white; color: var(--primary); }
-    .final-cta .btn-primary:hover { background: #F5F3FF; }
-
-    footer {
-      background: #F9FAFB; padding: 64px 0 32px;
-      border-top: 1px solid var(--border); color: var(--text-muted);
-    }
-    .footer-grid {
-      display: grid; grid-template-columns: 2fr 1fr 1fr;
-      gap: 40px; margin-bottom: 40px;
-    }
-    @media (max-width: 720px) { .footer-grid { grid-template-columns: 1fr; } }
-    footer h4 { color: var(--text); font-size: 14px; font-weight: 700; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.05em; }
-    footer ul { list-style: none; }
-    footer ul li { margin-bottom: 8px; }
-    footer ul li a { color: var(--text-muted); font-size: 14px; }
-    footer ul li a:hover { color: var(--primary); }
-    .footer-legal {
-      padding-top: 32px; border-top: 1px solid var(--border);
-      font-size: 13px; line-height: 1.6;
-    }
-    .footer-legal strong { color: var(--text); }
-  </style>
+  <meta name="description" content="Fun AI speech practice for toddlers ages 3-5. Build vocabulary every day for $30/month with a 7-day free trial. Available on Google Play.">
+  <meta name="author" content="Kid Speech AI">
+  <link rel="canonical" href="https://kidspeechai.com/">
+  <meta property="og:title" content="Kid Speech AI — Speech Practice for Toddlers">
+  <meta property="og:description" content="Fun AI speech practice for toddlers ages 3-5. $30/month with a 7-day free trial.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kidspeechai.com/">
+  <meta property="og:image" content="https://kidspeechai.com/mascot.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="sparkle-icon" viewBox="0 0 24 24"><path d="M12 2 L13.5 9 L20 10.5 L13.5 12 L12 19 L10.5 12 L4 10.5 L10.5 9 Z" fill="#FFE078" stroke="#FFC93A" stroke-width="1" stroke-linejoin="round"/></symbol>
+    <symbol id="star-icon" viewBox="0 0 24 24"><path d="M12 2 L14.5 8.5 L21.5 9.3 L16.2 14 L17.7 21 L12 17.3 L6.3 21 L7.8 14 L2.5 9.3 L9.5 8.5 Z" fill="#FFD166" stroke="#FFA834" stroke-width="1" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
 
 <header>
   <div class="container">
     <nav class="nav">
-      <a href="/" class="logo"><span class="emoji">🗣️</span><span>Kid Speech AI</span></a>
+      <a href="/" class="logo"><img src="/mascot.png" class="mascot-mini mascot-bg-remove" alt=""><span>Kid Speech AI</span></a>
       <div class="nav-links">
         <a href="#features">Features</a>
         <a href="#how">How it works</a>
@@ -258,22 +44,35 @@
 </header>
 
 <section class="hero">
+  <svg class="sparkle s1"><use href="#sparkle-icon"/></svg>
+  <svg class="sparkle s2"><use href="#star-icon"/></svg>
+  <svg class="sparkle s3"><use href="#star-icon"/></svg>
+  <svg class="sparkle s4"><use href="#sparkle-icon"/></svg>
+  <svg class="sparkle s5"><use href="#sparkle-icon"/></svg>
+  <svg class="sparkle s6"><use href="#star-icon"/></svg>
+  <svg class="sparkle s7"><use href="#sparkle-icon"/></svg>
+  <svg class="sparkle s8"><use href="#star-icon"/></svg>
   <div class="container">
-    <h1>Unlock your child's <span class="accent">voice</span></h1>
+    <div class="mascot-wrap">
+      <img src="/mascot.png" class="mascot-img mascot-bg-remove" alt="Kid Speech AI mascot — a friendly puzzle-piece brain character with ABC blocks, numbers, crayons, and rainbow stars">
+    </div>
+    <h1>Unlock your child's <span class="rainbow">voice</span></h1>
     <p class="subtitle">Fun daily speech practice for toddlers ages 3–5. A friendly AI buddy helps your child build vocabulary through play — screen time you can feel good about.</p>
     <div class="hero-cta">
       <a href="#pricing" class="btn btn-primary">Start 7-Day Free Trial</a>
       <a href="#features" class="btn btn-secondary">See How It Works</a>
     </div>
     <div class="hero-badges">
-      <span>✓ $30/month after trial</span>
-      <span>✓ Cancel anytime</span>
-      <span>✓ Available on Google Play</span>
+      <span><span class="check">✓</span> $30/month after trial</span>
+      <span><span class="check">✓</span> Cancel anytime</span>
+      <span><span class="check">✓</span> Available on Google Play</span>
     </div>
   </div>
 </section>
 
-<section class="block alt">
+<svg class="wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0,40 C240,80 480,0 720,40 C960,80 1200,0 1440,40 L1440,80 L0,80 Z" fill="#E0F4FF"/></svg>
+
+<section class="block bg-blue">
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">Why families love it</span>
@@ -288,83 +87,45 @@
   </div>
 </section>
 
+<svg class="wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0,40 C240,0 480,80 720,40 C960,0 1200,80 1440,40 L1440,0 L0,0 Z" fill="#E0F4FF"/></svg>
+
 <section class="block" id="features">
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">What's inside</span>
-      <h2>Fun & engaging speech practice</h2>
+      <h2>Fun &amp; engaging speech practice</h2>
       <p>Designed to build real vocabulary through play — not mindless scrolling.</p>
     </div>
     <div class="features">
-      <div class="feature">
-        <div class="icon">🍎</div>
-        <h3>Object Naming</h3>
-        <p>Toddlers practice naming everyday things like "milk," "apple," and "shoe." The more words they recognize, the more they can ask for what they need.</p>
-      </div>
-      <div class="feature">
-        <div class="icon">🎨</div>
-        <h3>Descriptive Words</h3>
-        <p>Kids learn "red ball," "big ball," "soft ball" — the building blocks of describing the world around them.</p>
-      </div>
-      <div class="feature">
-        <div class="icon">🏃</div>
-        <h3>Action Words</h3>
-        <p>The AI narrates simple actions like "putting on shoes" or "washing hands," helping toddlers learn verbs for asking what they want.</p>
-      </div>
-      <div class="feature">
-        <div class="icon">🎙️</div>
-        <h3>27 Friendly Voices</h3>
-        <p>Different voices, accents, and tones help kids recognize words across many speakers — a skill that makes vocabulary stick.</p>
-      </div>
-      <div class="feature">
-        <div class="icon">🌟</div>
-        <h3>Daily Affirmations</h3>
-        <p>A warm moment at the end of each session. Phrases like "I am brave" and "I can try" leave kids feeling good about practice.</p>
-      </div>
-      <div class="feature">
-        <div class="icon">🔢</div>
-        <h3>Counting & Alphabet</h3>
-        <p>Gentle repetition builds counting from 1 to 100, plus the letters of the alphabet, at your child's pace.</p>
-      </div>
-      <div class="feature">
-        <div class="icon">🐰</div>
-        <h3>Movement Breaks</h3>
-        <p>A cheerful AR character invites kids to stretch, hop, and move between sessions — healthy daily routines through play.</p>
-      </div>
-      <div class="feature">
-        <div class="icon">📈</div>
-        <h3>Progress Log</h3>
-        <p>When your child says a word, the app celebrates and notes it in your weekly summary so you can see vocabulary building over time.</p>
-      </div>
+      <div class="feature c1"><div class="icon">🍎</div><h3>Object Naming</h3><p>Toddlers practice naming everyday things like "milk," "apple," and "shoe." The more words they recognize, the more they can ask for what they need.</p></div>
+      <div class="feature c2"><div class="icon">🎨</div><h3>Descriptive Words</h3><p>Kids learn "red ball," "big ball," "soft ball" — the building blocks of describing the world around them.</p></div>
+      <div class="feature c3"><div class="icon">🏃</div><h3>Action Words</h3><p>The AI narrates simple actions like "putting on shoes" or "washing hands," helping toddlers learn verbs for asking what they want.</p></div>
+      <div class="feature c4"><div class="icon">🎙️</div><h3>27 Friendly Voices</h3><p>Different voices, accents, and tones help kids recognize words across many speakers — a skill that makes vocabulary stick.</p></div>
+      <div class="feature c5"><div class="icon">🌟</div><h3>Daily Affirmations</h3><p>A warm moment at the end of each session. Phrases like "I am brave" and "I can try" leave kids feeling good about practice.</p></div>
+      <div class="feature c6"><div class="icon">🔢</div><h3>Counting &amp; Alphabet</h3><p>Gentle repetition builds counting from 1 to 100, plus the letters of the alphabet, at your child's pace.</p></div>
+      <div class="feature c1"><div class="icon">🐰</div><h3>Movement Breaks</h3><p>A cheerful AR character invites kids to stretch, hop, and move between sessions — healthy daily routines through play.</p></div>
+      <div class="feature c2"><div class="icon">📈</div><h3>Progress Log</h3><p>When your child says a word, the app celebrates and notes it in your weekly summary so you can see vocabulary building over time.</p></div>
     </div>
   </div>
 </section>
 
-<section class="block alt" id="how">
+<svg class="wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0,40 C240,80 480,0 720,40 C960,80 1200,0 1440,40 L1440,80 L0,80 Z" fill="#FFF8E1"/></svg>
+
+<section class="block bg-yellow" id="how">
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">How it works</span>
       <h2>Three simple steps</h2>
     </div>
     <div class="steps">
-      <div class="step">
-        <div class="num-circle">1</div>
-        <h3>Download the app</h3>
-        <p>Get Kid Speech AI from Google Play. Set up your child's profile — name and age.</p>
-      </div>
-      <div class="step">
-        <div class="num-circle">2</div>
-        <h3>Start daily practice</h3>
-        <p>The AI creates personalized lessons. Your child plays games, practices sounds, and builds vocabulary — 15 minutes a day is all it takes.</p>
-      </div>
-      <div class="step">
-        <div class="num-circle">3</div>
-        <h3>Watch them grow</h3>
-        <p>Track weekly progress in the parent dashboard. Share reports with your child's pediatrician or speech-language pathologist.</p>
-      </div>
+      <div class="step"><div class="num-circle">1</div><h3>Download the app</h3><p>Get Kid Speech AI from Google Play. Set up your child's profile — name and age.</p></div>
+      <div class="step"><div class="num-circle">2</div><h3>Start daily practice</h3><p>The AI creates personalized lessons. Your child plays games, practices sounds, and builds vocabulary — 15 minutes a day is all it takes.</p></div>
+      <div class="step"><div class="num-circle">3</div><h3>Watch them grow</h3><p>Track weekly progress in the parent dashboard. Share reports with your child's pediatrician or speech-language pathologist.</p></div>
     </div>
   </div>
 </section>
+
+<svg class="wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0,40 C240,0 480,80 720,40 C960,0 1200,80 1440,40 L1440,0 L0,0 Z" fill="#FFF8E1"/></svg>
 
 <section class="block" id="pricing">
   <div class="container">
@@ -379,13 +140,13 @@
         <div class="price">$30<small>/month</small></div>
         <div class="trial">✨ 7-day free trial</div>
         <ul>
-          <li>Unlimited AI speech-practice sessions</li>
-          <li>Personalized vocabulary lessons</li>
-          <li>Gamified learning for ages 3–5</li>
-          <li>Parent progress dashboard</li>
-          <li>Weekly progress summaries</li>
-          <li>No ads, ever</li>
-          <li>Cancel anytime</li>
+          <li><span class="check">✓</span><span>Unlimited AI speech-practice sessions</span></li>
+          <li><span class="check">✓</span><span>Personalized vocabulary lessons</span></li>
+          <li><span class="check">✓</span><span>Gamified learning for ages 3–5</span></li>
+          <li><span class="check">✓</span><span>Parent progress dashboard</span></li>
+          <li><span class="check">✓</span><span>Weekly progress summaries</span></li>
+          <li><span class="check">✓</span><span>No ads, ever</span></li>
+          <li><span class="check">✓</span><span>Cancel anytime</span></li>
         </ul>
         <a href="#" class="play-btn">▶ Coming soon to Google Play</a>
       </div>
@@ -393,7 +154,9 @@
   </div>
 </section>
 
-<section class="block alt" id="faq">
+<svg class="wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0,40 C240,80 480,0 720,40 C960,80 1200,0 1440,40 L1440,80 L0,80 Z" fill="#E8F8EE"/></svg>
+
+<section class="block bg-mint" id="faq">
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">Frequently asked</span>
@@ -442,8 +205,8 @@
   <div class="container">
     <div class="footer-grid">
       <div>
-        <div class="logo" style="margin-bottom: 12px;"><span class="emoji">🗣️</span><span>Kid Speech AI</span></div>
-        <p style="font-size: 14px; color: var(--text-muted); max-width: 360px;">Fun, daily speech practice for toddlers ages 3–5. Built for parents who want screen time that helps their child grow.</p>
+        <div class="logo"><img src="/mascot.png" class="mascot-mini mascot-bg-remove" alt=""><span>Kid Speech AI</span></div>
+        <p class="footer-tagline">Fun, daily speech practice for toddlers ages 3–5. Built for parents who want screen time that helps their child grow.</p>
       </div>
       <div>
         <h4>Product</h4>
@@ -466,10 +229,45 @@
     </div>
     <div class="footer-legal">
       <p><strong>Kid Speech AI is an educational app for early vocabulary practice.</strong> It is not medical advice, not a diagnostic tool, and not a substitute for a licensed speech-language pathologist. Always consult a qualified professional for clinical guidance about your child's development.</p>
-      <p style="margin-top: 16px;">© 2026 Kid Speech AI. All rights reserved.</p>
+      <p style="margin-top:16px">© 2026 Kid Speech AI. All rights reserved.</p>
     </div>
   </div>
 </footer>
+
+<script>
+// Auto-remove pure-black background from mascot images (works on any .mascot-bg-remove img)
+(function(){
+  function processImg(img){
+    if (img.dataset.processed === '1' || !img.complete || !img.naturalWidth) return;
+    img.dataset.processed = '1';
+    try {
+      var c = document.createElement('canvas');
+      c.width = img.naturalWidth;
+      c.height = img.naturalHeight;
+      var ctx = c.getContext('2d');
+      ctx.drawImage(img, 0, 0);
+      var d = ctx.getImageData(0, 0, c.width, c.height);
+      var p = d.data;
+      for (var i = 0; i < p.length; i += 4) {
+        // Treat very dark pixels (luma < 35) as transparent
+        var luma = 0.299*p[i] + 0.587*p[i+1] + 0.114*p[i+2];
+        if (luma < 35) { p[i+3] = 0; }
+        else if (luma < 60) { p[i+3] = Math.round((luma - 35) * 10); } // soft edge
+      }
+      ctx.putImageData(d, 0, 0);
+      img.src = c.toDataURL('image/png');
+    } catch(e){}
+  }
+  function run(){
+    document.querySelectorAll('img.mascot-bg-remove').forEach(function(img){
+      if (img.complete) processImg(img);
+      else img.addEventListener('load', function(img){ processImg(img); });
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run);
+  else run();
+})();
+</script>
 
 </body>
 </html>
