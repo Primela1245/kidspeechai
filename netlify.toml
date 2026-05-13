@@ -1,41 +1,60 @@
 [build]
   publish = "."
 
-  [[redirects]]
-    from = "/privacy"
-      to = "/privacy.html"
-        status = 200
+# Redirect old aikidtherapy.com domain to new kidspeechai.com brand
+[[redirects]]
+  from = "https://aikidtherapy.com/*"
+  to = "https://kidspeechai.com/:splat"
+  status = 301
+  force = true
 
-        [[redirects]]
-          from = "/privacy/"
-            to = "/privacy.html"
-              status = 200
+[[redirects]]
+  from = "http://aikidtherapy.com/*"
+  to = "https://kidspeechai.com/:splat"
+  status = 301
+  force = true
 
-              [[redirects]]
-                from = "/terms"
-                  to = "/terms.html"
-                    status = 200
+[[redirects]]
+  from = "https://www.aikidtherapy.com/*"
+  to = "https://kidspeechai.com/:splat"
+  status = 301
+  force = true
 
-                    [[redirects]]
-                      from = "/terms/"
-                        to = "/terms.html"
-                          status = 200
+# Pretty URLs for legal pages
+[[redirects]]
+  from = "/privacy"
+  to = "/privacy.html"
+  status = 200
 
-                          [[redirects]]
-                            from = "/delete-account"
-                              to = "/delete-account.html"
-                                status = 200
+[[redirects]]
+  from = "/privacy/"
+  to = "/privacy.html"
+  status = 200
 
-                                [[redirects]]
-                                  from = "/delete-account/"
-                                    to = "/delete-account.html"
-                                      status = 200
+[[redirects]]
+  from = "/terms"
+  to = "/terms.html"
+  status = 200
 
-                                      [[headers]]
-                                        for = "/*"
-                                          [headers.values]
-                                              X-Frame-Options = "DENY"
-                                                  X-Content-Type-Options = "nosniff"
-                                                      Referrer-Policy = "strict-origin-when-cross-origin"
-                                                          Permissions-Policy = "geolocation=(), microphone=(), camera=()"
-                                                          
+[[redirects]]
+  from = "/terms/"
+  to = "/terms.html"
+  status = 200
+
+[[redirects]]
+  from = "/delete-account"
+  to = "/delete-account.html"
+  status = 200
+
+[[redirects]]
+  from = "/delete-account/"
+  to = "/delete-account.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
