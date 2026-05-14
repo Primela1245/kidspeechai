@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Blog — Kid Speech AI</title>
+<meta name="description" content="Parent-friendly articles about toddler speech development, vocabulary games, and milestones — from the team behind Kid Speech AI."/>
+<link rel="canonical" href="https://kidspeechai.com/blog/"/>
+<meta property="og:title" content="Blog — Kid Speech AI"/>
+<meta property="og:description" content="Parent-friendly articles about toddler speech development."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://kidspeechai.com/blog/"/>
+<link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--primary:#7C8CFF;--pink:#FF8FAB;--blue:#7CC4F2;--yellow:#FFD166;--mint:#95E1B3;--peach:#FFB5A7;--text:#2D2A4A;--text-muted:#6B6890;--bg-soft:#F7F4FF;--border:#E8E2FF}
+body{font-family:Nunito,-apple-system,sans-serif;color:var(--text);line-height:1.7;background:#FFFCF7}
+.container{max-width:1100px;margin:0 auto;padding:24px}
+header{background:white;border-bottom:2px solid var(--border);padding:14px 0;position:sticky;top:0;z-index:10}
+header .container{display:flex;align-items:center;justify-content:space-between;padding:0 24px}
+.logo{display:flex;align-items:center;gap:10px;font-family:Fredoka;font-weight:700;font-size:20px;color:var(--text);text-decoration:none}
+.logo-mascot{width:48px;height:48px;flex-shrink:0;object-fit:contain}
+.back{color:var(--primary);text-decoration:none;font-weight:600;font-size:15px}
+.back:hover{text-decoration:underline}
+.hero{text-align:center;padding:56px 24px 32px;background:linear-gradient(135deg,#FFF4F8 0%,#F7F4FF 50%,#F0F8FF 100%);border-radius:0 0 32px 32px;margin-bottom:40px;position:relative;overflow:hidden}
+.hero h1{font-family:Fredoka;font-size:46px;font-weight:700;line-height:1.1;letter-spacing:-0.02em;margin-bottom:14px}
+.hero p{font-size:18px;color:var(--text-muted);max-width:600px;margin:0 auto}
+.hero-emoji{font-size:64px;margin-bottom:12px;display:inline-block;animation:bob 3s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-8px) rotate(3deg)}}
+.posts{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px;padding:0 24px 40px}
+.post-card{display:block;background:white;border:2px solid var(--border);border-radius:20px;overflow:hidden;text-decoration:none;color:var(--text);transition:transform .2s,box-shadow .2s,border-color .2s}
+.post-card:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(124,140,255,.18);border-color:var(--primary)}
+.post-hero{aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;font-size:60px;background:linear-gradient(135deg,var(--peach),var(--pink))}
+.post-body{padding:20px}
+.post-date{font-size:13px;color:var(--text-muted);margin-bottom:6px;font-weight:600}
+.post-title{font-family:Fredoka;font-size:20px;line-height:1.25;font-weight:600;margin-bottom:8px}
+.post-link{display:inline-block;margin-top:8px;color:var(--primary);font-weight:700;font-size:14px}
+.loading,.error,.empty{text-align:center;padding:40px 24px;color:var(--text-muted)}
+.error{color:#D93F4D}
+.bg-pink{background:linear-gradient(135deg,#FFB5C5,#FF8FAB)}
+.bg-blue{background:linear-gradient(135deg,#B5DEFF,#7CC4F2)}
+.bg-yellow{background:linear-gradient(135deg,#FFE8A8,#FFD166)}
+.bg-mint{background:linear-gradient(135deg,#C5F0D5,#95E1B3)}
+.bg-purple{background:linear-gradient(135deg,#D4C5FF,#9B8FE0)}
+.bg-peach{background:linear-gradient(135deg,#FFD4C7,#FFB5A7)}
+footer{background:var(--bg-soft);padding:32px 0;margin-top:40px;text-align:center;color:var(--text-muted);font-size:14px;border-top:1px solid var(--border)}
+footer a{color:var(--primary)}
+@media(max-width:600px){.hero h1{font-size:34px}.hero-emoji{font-size:48px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <a href="/" class="logo"><img src="/mascot.png" class="logo-mascot mascot-bg-remove" alt="Kid Speech AI mascot"/><span>Kid Speech AI</span></a>
+    <a href="/" class="back">← Home</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-emoji">&#x1F4DA;</div>
+  <h1>Speech Tips for Parents</h1>
+  <p>Friendly, practical articles about toddler speech development, vocabulary games, and milestones — written for parents, not specialists.</p>
+</section>
+
+<div class="container" style="padding:0">
+  <div id="posts" class="posts">
+    <div class="loading">Loading posts&hellip;</div>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2026 Kid Speech AI &middot; <a href="/">Home</a> &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/terms/">Terms</a> &middot; <a href="/delete-account/">Delete Account</a></p>
+</footer>
+
+<script>
+(function(){
+  function processImg(img){
+    if (img.dataset.processed === '1' || !img.complete || !img.naturalWidth) return;
+    img.dataset.processed = '1';
+    try {
+      var c = document.createElement('canvas');
+      c.width = img.naturalWidth; c.height = img.naturalHeight;
+      var ctx = c.getContext('2d');
+      ctx.drawImage(img, 0, 0);
+      var d = ctx.getImageData(0, 0, c.width, c.height);
+      var p = d.data;
+      for (var i = 0; i < p.length; i += 4) {
+        var luma = 0.299*p[i] + 0.587*p[i+1] + 0.114*p[i+2];
+        if (luma < 35) { p[i+3] = 0; }
+        else if (luma < 60) { p[i+3] = Math.round((luma - 35) * 10); }
+      }
+      ctx.putImageData(d, 0, 0);
+      img.src = c.toDataURL('image/png');
+    } catch(e){}
+  }
+  function run(){
+    document.querySelectorAll('img.mascot-bg-remove').forEach(function(img){
+      if (img.complete) processImg(img);
+      else img.addEventListener('load', function(){ processImg(img); });
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run);
+  else run();
+})();
+
+(function(){
+  var TOPIC_META = {
+    'speech-milestones-by-age':       {emoji:'\u{1F4C5}', bg:'bg-blue'},
+    'when-to-see-speech-therapist':   {emoji:'\u{1FA7A}', bg:'bg-mint'},
+    'articulation-development':       {emoji:'\u{1F444}', bg:'bg-pink'},
+    'phonological-awareness':         {emoji:'\u{1F3B5}', bg:'bg-purple'},
+    'expressive-language-development':{emoji:'\u{1F4AC}', bg:'bg-yellow'},
+    'receptive-language-development': {emoji:'\u{1F442}', bg:'bg-mint'},
+    'late-talkers-toddlers':          {emoji:'\u{1F331}', bg:'bg-peach'},
+    'encouraging-first-words':        {emoji:'\u{1F31F}', bg:'bg-yellow'},
+    'reading-aloud-benefits':         {emoji:'\u{1F4D6}', bg:'bg-peach'},
+    'screen-time-and-speech':         {emoji:'\u{1F4F1}', bg:'bg-blue'},
+    'vocabulary-building-games':      {emoji:'\u{1F3B2}', bg:'bg-pink'},
+    'bilingual-speech-development':   {emoji:'\u{1F30E}', bg:'bg-mint'},
+    'autism-speech-development':      {emoji:'\u{1F9E9}', bg:'bg-purple'},
+    'apraxia-of-speech-in-kids':      {emoji:'\u{1F9E0}', bg:'bg-blue'},
+    'stuttering-in-toddlers':         {emoji:'\u{1F30A}', bg:'bg-mint'},
+    'tongue-tie-and-speech':          {emoji:'\u{1F445}', bg:'bg-pink'},
+    'hearing-and-speech':             {emoji:'\u{1F442}', bg:'bg-yellow'},
+    'sign-language-and-speech':       {emoji:'\u{1F91F}', bg:'bg-purple'},
+    'play-based-speech-practice':     {emoji:'\u{1F9F8}', bg:'bg-peach'},
+    'car-ride-speech-games':          {emoji:'\u{1F697}', bg:'bg-blue'},
+    'mealtime-vocabulary':            {emoji:'\u{1F34E}', bg:'bg-pink'},
+    'bedtime-routine-vocabulary':     {emoji:'\u{1F319}', bg:'bg-purple'},
+    'early-intervention-overview':    {emoji:'\u{1F331}', bg:'bg-mint'}
+  };
+  var DEFAULT_META = {emoji:'\u{1F4AC}', bg:'bg-pink'};
+
+  function titleCase(s){
+    return s.replace(/-/g,' ').replace(/\b\w/g, function(c){return c.toUpperCase();});
+  }
+  function escapeHtml(s){
+    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+  function formatDate(iso){
+    var d = new Date(iso + 'T12:00:00Z');
+    if (isNaN(d)) return iso;
+    return d.toLocaleDateString('en-US', {year:'numeric', month:'long', day:'numeric'});
+  }
+
+  fetch('https://api.github.com/repos/Primela1245/kidspeechai/contents/blog?ref=master')
+    .then(function(r){ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); })
+    .then(function(items){
+      var posts = items
+        .filter(function(it){ return it.type === 'file' && /\.html$/.test(it.name) && it.name !== 'index.html'; })
+        .map(function(it){
+          var m = it.name.match(/^(\d{4}-\d{2}-\d{2})-(.+)\.html$/);
+          if (!m) return null;
+          return { date: m[1], slug: m[2], filename: it.name };
+        })
+        .filter(Boolean)
+        .sort(function(a,b){ return b.date.localeCompare(a.date) || b.slug.localeCompare(a.slug); });
+
+      var container = document.getElementById('posts');
+      if (!posts.length){
+        container.innerHTML = '<div class="empty">No posts yet &mdash; check back soon!</div>';
+        return;
+      }
+      container.innerHTML = posts.map(function(p){
+        var meta = TOPIC_META[p.slug] || DEFAULT_META;
+        var title = titleCase(p.slug);
+        return '<a class="post-card" href="/blog/' + escapeHtml(p.filename) + '">'
+          + '<div class="post-hero ' + meta.bg + '">' + meta.emoji + '</div>'
+          + '<div class="post-body">'
+          + '<div class="post-date">' + escapeHtml(formatDate(p.date)) + '</div>'
+          + '<div class="post-title">' + escapeHtml(title) + '</div>'
+          + '<span class="post-link">Read article →</span>'
+          + '</div></a>';
+      }).join('');
+    })
+    .catch(function(err){
+      document.getElementById('posts').innerHTML =
+        '<div class="error">Could not load posts right now. Please try again in a moment.</div>';
+      console.error(err);
+    });
+})();
+</script>
+
+</body>
+</html>
