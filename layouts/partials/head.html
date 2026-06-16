@@ -2,7 +2,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="google-site-verification" content="zvT1kK4EXidlr9T3jOXFrMLYBBGMyYVIEtQso3pGreQ" />
 
-<!-- Primary SEO Meta -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18245311792"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-18245311792');
+</script><!-- Primary SEO Meta -->
 <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | Kid Speech AI{{ end }}</title>
 <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 <meta name="author" content="{{ .Site.Params.author }}">
