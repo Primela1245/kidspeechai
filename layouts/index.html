@@ -1,346 +1,169 @@
 {{ define "main" }}
-<!-- Hero Section -->
-<section class="hero" id="hero">
-  <div class="hero-particles" id="hero-particles"></div>
+<style>
+  .vsl-hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 2rem 4rem;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .vsl-pre-headline {
+    color: #ff3b6a;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .vsl-headline {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    max-width: 900px;
+  }
+
+  .vsl-video-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    background: #0f172a;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* 16:9 Aspect Ratio trick */
+  .vsl-video-container::before {
+    content: "";
+    display: block;
+    padding-top: 56.25%;
+  }
+
+  .vsl-video-container iframe,
+  .vsl-video-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  
+  .vsl-video-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #94a3b8;
+  }
+  
+  .vsl-play-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: #ff3b6a;
+    animation: pulse 2s infinite;
+  }
+
+  .vsl-cta-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .vsl-btn {
+    display: block;
+    width: 100%;
+    background: linear-gradient(135deg, #ff3b6a 0%, #ff8a00 100%);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 1.5rem;
+    border-radius: 100px;
+    text-decoration: none;
+    box-shadow: 0 10px 25px -5px rgba(255, 59, 106, 0.5);
+    transition: all 0.3s ease;
+    margin-bottom: 1.5rem;
+    animation: bounce-subtle 3s infinite;
+  }
+
+  .vsl-btn:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 20px 35px -5px rgba(255, 59, 106, 0.6);
+    color: white;
+  }
+
+  .vsl-bullets {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: left;
+    margin: 2rem auto 0;
+    max-width: 500px;
+    font-size: 1.1rem;
+    color: #cbd5e1;
+  }
+
+  .vsl-bullet {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .vsl-bullet-icon {
+    color: #10b981;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  
+  @keyframes bounce-subtle {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+  }
+
+</style>
+
+<section class="vsl-hero">
   <div class="hero-bg"></div>
-  <div class="hero-content">
-    <div class="hero-badge">🚀 Now Seeking Beta Testers — Limited Spots</div>
-    <h1 class="hero-title">Kid Speech AI: Unlock Your Child's <span class="gradient-text">Voice</span></h1>
-    <p class="hero-subtitle">Turn playtime into speech practice with a fun AI companion. Reassuring, screen-time you can feel good about for toddlers with speech delay.</p>
-    <div class="hero-cta">
-      <a href="#pledge" class="btn btn-primary" id="hero-pledge-btn">🚀 Back This Project — $179</a>
-      <a href="#app" class="btn btn-secondary" id="hero-app-btn">📱 See the App</a>
-    </div>
-    <div class="hero-trust">
-      <span>✓ $30/month Speech Therapy App</span>
-      <span>✓ AI Glasses — $179 Pre-Order</span>
-      <span>✓ Play Store Only</span>
-    </div>
+  <div class="hero-particles"></div>
+  
+  <div class="vsl-video-container" style="margin-top: 2rem;">
+    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/XUQwyiICDBk" title="Kid Speech AI VSL" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
   </div>
-</section>
 
-<!-- Problem Section -->
-<section class="problem-section" id="problem">
-  <div class="section-container">
-    <h2 class="section-title">Speech Therapy Shouldn't <span class="gradient-text">Break the Bank</span></h2>
-    <p class="section-subtitle">1 in 12 children has a speech or language disorder. Most families wait months for an appointment — and pay $150–$300 per session when they finally get one.</p>
-    <div class="stats-grid">
-      <div class="stat-card">
-        <div class="stat-number">7.7%</div>
-        <div class="stat-label">of U.S. children have a speech, voice, language, or swallowing disorder</div>
+  <div class="vsl-cta-wrapper">
+    <a href="https://play.google.com/store" target="_blank" class="vsl-btn" id="vsl-download-btn">
+      Get App Here
+    </a>
+    
+    <div class="vsl-bullets">
+      <div class="vsl-bullet">
+        <span class="vsl-bullet-icon">🎨</span>
+        <span><strong>AI Flashcard Overlays.</strong> Flashcards pop up right over their favorite videos and games without interrupting them!</span>
       </div>
-      <div class="stat-card">
-        <div class="stat-number">6–12 mo</div>
-        <div class="stat-label">average waitlist time for a speech-language pathologist</div>
+      <div class="vsl-bullet">
+        <span class="vsl-bullet-icon">🎙️</span>
+        <span><strong>27 Friendly Voices.</strong> Gives your child the constant, patient repetition they need to learn everyday words.</span>
       </div>
-      <div class="stat-card">
-        <div class="stat-number">$200+</div>
-        <div class="stat-label">average cost per traditional speech therapy session</div>
+      <div class="vsl-bullet">
+        <span class="vsl-bullet-icon">📈</span>
+        <span><strong>Weekly Progress Log.</strong> The app tracks every new word they say, so you can actually see their vocabulary grow.</span>
       </div>
-      <div class="stat-card">
-        <div class="stat-number">$30</div>
-        <div class="stat-label">AI Kid Therapy — unlimited sessions, every single day</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- App Section -->
-<section class="app-section" id="app">
-  <div class="section-container">
-    <div class="product-header">
-      <span class="product-badge">📱 THE APP</span>
-      <h2 class="section-title">Fun & Engaging <span class="gradient-text">Speech Practice</span></h2>
-      <p class="section-subtitle">Like having a playful speech therapist available 24/7. Designed to build real vocabulary, not just mindless scrolling.</p>
-    </div>
-    <div class="features-grid">
-      <div class="feature-card">
-        <div class="feature-icon">🍼</div>
-        <h3>Object Naming (Less Crying)</h3>
-        <p>Children often cry because they want something but don't know the word for it. By constantly reminding them of object names (like "Milk" or "Apple"), they learn to ask instead of having tantrums.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🧠</div>
-        <h3>Descriptive Naming</h3>
-        <p>Teaches parameters like "red ball", "big ball", or "3D ball". Your child begins to understand object categorization the exact same way AI learns data.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🏃</div>
-        <h3>Action Narration</h3>
-        <p>Narrates actions like "putting on shoes" or "washing dishes" so your child understands verbs and can start asking for specific actions.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🗣️</div>
-        <h3>27 Brain-Activating Voices</h3>
-        <p>The brain's Reticular Activating System (RAS) tunes out familiar sounds. We use 27 different men, women, and accents so the brain recognizes it as "new", paying attention and remembering words faster!</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🌟</div>
-        <h3>Affirmation Time</h3>
-        <p>Programming the brain for success. Instead of letting them feel down, daily phrases like "I am smart, I am brave" build deep subconscious confidence and self-worth.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🔢</div>
-        <h3>Counting & Alphabet</h3>
-        <p>Through continuous, gentle repetition, your child learns not just 1-10, but how to count all the way to 100, and that 2 always comes after 1.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🐰</div>
-        <h3>AR Exercise Bunny</h3>
-        <p>Kids learn by mimicking. Our AR bunny shows them new exercises and dances. They look at it as playtime, but it builds healthy daily physical routines.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">📈</div>
-        <h3>Voice Recognition Log</h3>
-        <p>When your child says the word correctly back to the AI, it marks it down in the Daily Progress Log so you can see exactly how their vocabulary is growing.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🥗</div>
-        <h3>Nutrition & Sound Therapy</h3>
-        <p>Play daily frequencies for relaxing and healing. Plus, use the Nutrition Log to track diet — so if their tummy hurts, you and your doctor can see exactly why (too many cookies!).</p>
-      </div>
-    </div>
-    <div class="app-cta">
-      <a href="https://buy.stripe.com/00w00jebq93mbCi95d7g40a" class="btn btn-primary" target="_blank" rel="noopener" style="padding: 1rem 2rem; font-size: 1.2rem; display: inline-flex; align-items: center; gap: 0.5rem; background: #635bff; color: white;">
-        💳 Subscribe Now — $30/mo
-      </a>
-      <p class="app-price-note" style="margin-top: 1rem;">Secure checkout via Stripe. You will receive an email with instructions to download the app after purchase.</p>
-    </div>
-  </div>
-</section>
-
-<!-- Glasses Section -->
-<section class="glasses-section" id="glasses">
-  <div class="section-container">
-    <div class="product-header">
-      <span class="product-badge glass-badge">👓 THE GLASSES</span>
-      <h2 class="section-title">The World's First <span class="gradient-text">AI Glasses for Kids</span></h2>
-      <p class="section-subtitle">Nobody is making AI glasses for children. We're building them from scratch — a camera that identifies objects and a microphone that teaches vocabulary through audio. No screen. Just learning by seeing.</p>
-    </div>
-    <div class="glasses-showcase">
-      <div class="glasses-visual">
-        <div class="glasses-mockup">
-          <div class="glasses-frame">
-            <div class="lens left-lens">
-              <div class="lens-dot"></div>
-            </div>
-            <div class="bridge"></div>
-            <div class="lens right-lens">
-              <div class="camera-indicator">
-                <span class="camera-dot"></span>
-                CAM
-              </div>
-            </div>
-          </div>
-          <div class="glasses-arms">
-            <div class="arm left-arm">
-              <div class="mic-indicator">🎙️ MIC</div>
-            </div>
-            <div class="arm right-arm">
-              <div class="speaker-indicator">🔊 SPEAKER</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="glasses-features">
-        <div class="glass-feature">
-          <div class="glass-feature-icon">📸</div>
-          <div>
-            <h4>Camera Object Detection</h4>
-            <p>Points at a dog? The glasses say "Dog! D-O-G. Can you say dog?" Real-time object identification turns the whole world into a classroom.</p>
-          </div>
-        </div>
-        <div class="glass-feature">
-          <div class="glass-feature-icon">🎧</div>
-          <div>
-            <h4>Audio-Only Learning</h4>
-            <p>No screen time. The glasses speak directly to your child through bone-conduction speakers — gentle, clear, and safe for little ears.</p>
-          </div>
-        </div>
-        <div class="glass-feature">
-          <div class="glass-feature-icon">🎙️</div>
-          <div>
-            <h4>Built-In Microphone</h4>
-            <p>Listens when your child tries to repeat words and provides real-time pronunciation feedback. Like a patient tutor that never gets tired.</p>
-          </div>
-        </div>
-        <div class="glass-feature">
-          <div class="glass-feature-icon">🧒</div>
-          <div>
-            <h4>Designed for Kids</h4>
-            <p>Lightweight, durable, colorful frames built for ages 3–8. Flexible hinges, soft nose pads, and no sharp edges. Built to survive toddlers.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- How It Works Section -->
-<section class="how-section" id="how-it-works">
-  <div class="section-container">
-    <h2 class="section-title">How It <span class="gradient-text">Works</span></h2>
-    <div class="steps-grid">
-      <div class="step-card">
-        <div class="step-number">01</div>
-        <div class="step-icon">📱</div>
-        <h3>Download the App</h3>
-        <p>Get AI Kid Therapy from Google Play. Set up your child's profile — age, current vocabulary level, and goals.</p>
-      </div>
-      <div class="step-connector"></div>
-      <div class="step-card">
-        <div class="step-number">02</div>
-        <div class="step-icon">🎯</div>
-        <h3>Start Daily Sessions</h3>
-        <p>Our AI creates personalized lessons. Your child plays games, practices sounds, and builds vocabulary — 15 minutes a day is all it takes.</p>
-      </div>
-      <div class="step-connector"></div>
-      <div class="step-card">
-        <div class="step-number">03</div>
-        <div class="step-icon">🚀</div>
-        <h3>Watch Them Grow</h3>
-        <p>Track weekly progress. Add AI glasses for immersive, real-world learning. Share reports with your child's doctor or SLP.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Funding / Pledge Section -->
-<section class="funding-section" id="pledge">
-  <div class="section-container">
-    <h2 class="section-title">Help Us Build the <span class="gradient-text">Future</span></h2>
-    <p class="section-subtitle">We're building AI glasses for kids from scratch. No big corporate backing — just a parent who believes every child deserves access to speech therapy. Back this project and be one of the first beta testers.</p>
-
-    <div class="funding-dashboard">
-      <div class="funding-progress-wrap">
-        <div class="funding-amount">
-          <span class="funding-raised" id="funding-raised">$0</span>
-          <span class="funding-goal">of $10,000 goal</span>
-        </div>
-        <div class="progress-bar">
-          <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
-        </div>
-        <div class="funding-meta">
-          <span class="backer-count"><strong id="backer-count">0</strong> backers</span>
-          <span class="funding-status">🟢 Accepting pre-orders</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="pledge-grid" id="pricing">
-      <div class="pledge-card">
-        <div class="pledge-popular">Most Popular</div>
-        <div class="pledge-price">$30<span>/month</span></div>
-        <h3>Speech Therapy App</h3>
-        <p class="pledge-desc">Full access to the AI Kid Therapy app</p>
-        <ul class="pledge-features">
-          <li>✓ Unlimited AI speech coaching sessions</li>
-          <li>✓ Personalized vocabulary lessons</li>
-          <li>✓ Gamified learning for ages 3–5</li>
-          <li>✓ Parent progress dashboard</li>
-          <li>✓ Weekly progress reports</li>
-          <li>✓ 7-day free trial</li>
-          <li>✓ Cancel anytime</li>
-        </ul>
-        <a href="https://buy.stripe.com/00w00jebq93mbCi95d7g40a" class="btn btn-primary" target="_blank" rel="noopener" style="width: 100%; text-align: center; background: #635bff; color: white;">
-          💳 Subscribe Now
-        </a>
-      </div>
-
-      <div class="pledge-card pledge-featured">
-        <div class="pledge-popular">🚀 Beta Tester</div>
-        <div class="pledge-price">$179</div>
-        <h3>AI Glasses for Kids</h3>
-        <p class="pledge-desc">Pre-order the world's first AI glasses for children</p>
-        <ul class="pledge-features">
-          <li>✓ AI glasses with camera & microphone</li>
-          <li>✓ Real-time object identification</li>
-          <li>✓ Audio-only learning (no screen)</li>
-          <li>✓ Built for ages 3–8</li>
-          <li>✓ 6 months free app subscription</li>
-          <li>✓ Early beta tester access</li>
-          <li>✓ Ships when $10K goal is reached</li>
-        </ul>
-        <a href="https://buy.stripe.com/bJedR95EUdjC8q6bdl7g409" class="btn btn-primary btn-full" id="pledge-glasses-btn">🚀 Pre-Order Now — $179</a>
-        <p class="pledge-note">Production begins when we hit $10,000</p>
-      </div>
-
-
-    </div>
-  </div>
-</section>
-
-<!-- FAQ Section -->
-<section class="faq-section-home" id="faq">
-  <div class="section-container">
-    <h2 class="section-title">Frequently Asked <span class="gradient-text">Questions</span></h2>
-    <div class="faq-grid">
-      <div class="faq-item-home">
-        <h3 class="faq-q">Is this a replacement for a speech therapist?</h3>
-        <p class="faq-a">AI Kid Therapy is a gentle supplement to professional therapy, not a replacement. It provides fun daily practice and reinforcement between sessions — or serves as an affordable starting point for families on waitlists.</p>
-      </div>
-      <div class="faq-item-home">
-        <h3 class="faq-q">What age is this for?</h3>
-        <p class="faq-a">The app is designed for toddlers ages 3–5 with speech delay, autism spectrum, or who are late talkers. The AI glasses are built for kids ages 3–8. Always consult your pediatrician for clinical guidance.</p>
-      </div>
-      <div class="faq-item-home">
-        <h3 class="faq-q">When will the AI glasses ship?</h3>
-        <p class="faq-a">We begin production once we reach our $10,000 funding goal. We're building these from scratch — estimated delivery is 4–6 months after the goal is met. Beta testers get first shipment priority.</p>
-      </div>
-      <div class="faq-item-home">
-        <h3 class="faq-q">Is there a screen on the glasses?</h3>
-        <p class="faq-a">No. The glasses are completely audio-only — no screen, no display, no additional screen time. A camera identifies objects and the AI speaks to your child through built-in speakers. Zero screen time added.</p>
-      </div>
-      <div class="faq-item-home">
-        <h3 class="faq-q">Is this safe screen time for my toddler?</h3>
-        <p class="faq-a">Yes! We built AI Kid Therapy to be the exact opposite of mindless scrolling. The app uses the camera to look outward at your child's toys and real world, turning physical play into an interactive vocabulary lesson. It's screen time you can feel genuinely good about.</p>
-      </div>
-      <div class="faq-item-home">
-        <h3 class="faq-q">Can I get a refund on the glasses pre-order?</h3>
-        <p class="faq-a">Yes — full refund available anytime before production begins. Once manufacturing starts, we offer a 30-day satisfaction guarantee after delivery.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Blog Section -->
-<section class="blog-section" id="latest-posts">
-  <div class="section-container">
-    <h2 class="section-title">Latest from the <span class="gradient-text">Blog</span></h2>
-    <p class="section-subtitle">Expert guides on speech therapy, autism, and AI-powered learning for kids</p>
-    <div class="posts-grid">
-      {{ range first 6 (where .Site.RegularPages "Section" "blog") }}
-      <a href="{{ .Permalink }}" class="post-card">
-        {{ with .Params.featured_image }}
-        <div class="post-image" style="background-image: url('{{ . }}')"></div>
-        {{ end }}
-        <div class="post-content">
-          {{ with .Params.categories }}<span class="post-category">{{ index . 0 }}</span>{{ end }}
-          <h3>{{ .Title }}</h3>
-          <p>{{ .Description }}</p>
-          <span class="post-date">{{ .Date.Format "January 2, 2006" }}</span>
-        </div>
-      </a>
-      {{ end }}
-    </div>
-    {{ if gt (len (where .Site.RegularPages "Section" "blog")) 0 }}
-    <div class="section-cta">
-      <a href="/blog/" class="btn btn-secondary">View All Posts →</a>
-    </div>
-    {{ end }}
-  </div>
-</section>
-
-<!-- Final CTA Section -->
-<section class="cta-section" id="cta-bottom">
-  <div class="section-container">
-    <h2>Every Child Deserves a <span class="gradient-text">Voice</span></h2>
-    <p>Don't wait on a 6-month waitlist. Don't spend $200 per session. Start AI-powered speech therapy today for $30/month — or pre-order the world's first AI glasses for kids.</p>
-    <div class="hero-cta">
-      <a href="#pledge" class="btn btn-primary">🚀 Back This Project</a>
-      <a href="#app" class="btn btn-secondary">📱 Learn About the App</a>
     </div>
   </div>
 </section>
 {{ end }}
-
