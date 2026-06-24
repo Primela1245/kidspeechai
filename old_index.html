@@ -1,0 +1,475 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kid Speech AI ΓÇö Speech Practice for Toddlers</title>
+  <meta name="description" content="Fun AI speech practice for toddlers ages 3-5. Build vocabulary every day for $30/month with a 7-day free trial. Available on Google Play." />
+  <meta name="author" content="Kid Speech AI" />
+  <link rel="canonical" href="https://kidspeechai.com/" />
+  <meta property="og:title" content="Kid Speech AI ΓÇö Speech Practice for Toddlers" />
+  <meta property="og:description" content="Fun AI speech practice for toddlers ages 3-5. $30/month with a 7-day free trial." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://kidspeechai.com/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E≡ƒùú∩╕Å%3C/text%3E%3C/svg%3E" />
+  <style>
+    *,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --primary: #6366F1;
+      --primary-dark: #4F46E5;
+      --accent: #F59E0B;
+      --accent-dark: #D97706;
+      --text: #1F2937;
+      --text-muted: #6B7280;
+      --bg: #ffffff;
+      --bg-soft: #F9FAFB;
+      --bg-card: #ffffff;
+      --border: #E5E7EB;
+      --success: #10B981;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.06);
+      --shadow-lg: 0 20px 25px -5px rgba(0,0,0,0.08), 0 8px 10px -6px rgba(0,0,0,0.05);
+      --radius: 12px;
+      --radius-lg: 20px;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 16px 0;
+    }
+    .logo {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 20px; color: var(--text);
+    }
+    .logo span.emoji { font-size: 28px; }
+    .nav-links { display: flex; gap: 32px; align-items: center; }
+    .nav-links a { color: var(--text); font-weight: 500; font-size: 15px; }
+    .nav-cta {
+      background: var(--primary); color: white !important;
+      padding: 10px 20px; border-radius: 8px; font-weight: 600;
+      transition: background 0.2s;
+    }
+    .nav-cta:hover { background: var(--primary-dark); text-decoration: none; }
+    @media (max-width: 640px) { .nav-links a:not(.nav-cta) { display: none; } }
+
+    .hero {
+      padding: 80px 0 100px;
+      background: linear-gradient(180deg, #F5F3FF 0%, #ffffff 100%);
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: clamp(36px, 6vw, 56px);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 24px;
+    }
+    .hero h1 span.accent { color: var(--primary); }
+    .hero p.subtitle {
+      font-size: 20px; color: var(--text-muted);
+      max-width: 640px; margin: 0 auto 40px;
+    }
+    .hero-cta { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 14px 28px; border-radius: 10px;
+      font-weight: 600; font-size: 16px;
+      transition: all 0.2s; text-decoration: none !important;
+      border: 2px solid transparent; cursor: pointer;
+    }
+    .btn-primary { background: var(--primary); color: white; }
+    .btn-primary:hover { background: var(--primary-dark); transform: translateY(-1px); box-shadow: var(--shadow-md); }
+    .btn-secondary { background: white; color: var(--text); border-color: var(--border); }
+    .btn-secondary:hover { border-color: var(--primary); color: var(--primary); }
+    .hero-badges {
+      display: flex; gap: 24px; justify-content: center; flex-wrap: wrap;
+      margin-top: 40px; color: var(--text-muted); font-size: 14px;
+    }
+    .hero-badges span { display: flex; align-items: center; gap: 6px; }
+
+    section.block { padding: 80px 0; }
+    section.block.alt { background: var(--bg-soft); }
+    .section-head { text-align: center; max-width: 720px; margin: 0 auto 56px; }
+    .section-head .eyebrow {
+      display: inline-block; font-size: 13px; font-weight: 700;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--primary); margin-bottom: 12px;
+    }
+    .section-head h2 {
+      font-size: clamp(28px, 4vw, 40px); font-weight: 800;
+      letter-spacing: -0.02em; line-height: 1.2; margin-bottom: 16px;
+    }
+    .section-head p { font-size: 18px; color: var(--text-muted); }
+
+    .stats {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px; margin-top: 24px;
+    }
+    .stat {
+      background: white; padding: 32px 24px; border-radius: var(--radius);
+      border: 1px solid var(--border); text-align: center;
+    }
+    .stat .num { font-size: 36px; font-weight: 800; color: var(--primary); line-height: 1; }
+    .stat .label { color: var(--text-muted); margin-top: 8px; font-size: 14px; }
+
+    .features {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .feature {
+      background: white; border-radius: var(--radius); padding: 28px;
+      border: 1px solid var(--border); transition: all 0.2s;
+    }
+    .feature:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+    .feature .icon {
+      width: 48px; height: 48px; border-radius: 12px;
+      background: linear-gradient(135deg, #EEF2FF, #E0E7FF);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 24px; margin-bottom: 16px;
+    }
+    .feature h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+    .feature p { color: var(--text-muted); font-size: 15px; }
+
+    .steps {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 32px; align-items: start;
+    }
+    .step { text-align: center; }
+    .step .num-circle {
+      width: 56px; height: 56px; border-radius: 50%;
+      background: var(--primary); color: white;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; font-size: 22px; margin: 0 auto 20px;
+    }
+    .step h3 { font-size: 20px; font-weight: 700; margin-bottom: 10px; }
+    .step p { color: var(--text-muted); font-size: 15px; }
+
+    .pricing-wrap { display: flex; justify-content: center; }
+    .pricing-card {
+      background: white; max-width: 480px; width: 100%;
+      border: 2px solid var(--primary); border-radius: var(--radius-lg);
+      padding: 40px; text-align: center; box-shadow: var(--shadow-lg);
+    }
+    .pricing-card .price-label { color: var(--primary); font-weight: 600; margin-bottom: 8px; }
+    .pricing-card .price { font-size: 52px; font-weight: 800; letter-spacing: -0.02em; }
+    .pricing-card .price small { font-size: 18px; color: var(--text-muted); font-weight: 500; }
+    .pricing-card .trial { color: var(--success); font-weight: 600; margin: 8px 0 28px; }
+    .pricing-card ul { list-style: none; text-align: left; margin-bottom: 32px; }
+    .pricing-card ul li {
+      padding: 8px 0; color: var(--text); display: flex; align-items: flex-start; gap: 10px;
+    }
+    .pricing-card ul li::before {
+      content: "Γ£ô"; color: var(--success); font-weight: 800; font-size: 18px;
+      flex-shrink: 0;
+    }
+    .pricing-card .play-btn {
+      background: #000; color: white;
+      padding: 16px 24px; border-radius: 10px; font-weight: 600;
+      display: inline-flex; align-items: center; gap: 10px;
+      text-decoration: none !important;
+    }
+    .pricing-card .play-btn:hover { background: #1F2937; }
+
+    .faq { max-width: 760px; margin: 0 auto; }
+    details {
+      background: white; border: 1px solid var(--border);
+      border-radius: var(--radius); margin-bottom: 12px;
+      padding: 0; overflow: hidden;
+    }
+    details summary {
+      padding: 20px 24px; cursor: pointer; font-weight: 600;
+      list-style: none; position: relative; font-size: 16px;
+    }
+    details summary::-webkit-details-marker { display: none; }
+    details summary::after {
+      content: "+"; position: absolute; right: 24px; top: 50%;
+      transform: translateY(-50%); font-size: 24px; color: var(--primary);
+      transition: transform 0.2s;
+    }
+    details[open] summary::after { transform: translateY(-50%) rotate(45deg); }
+    details .answer {
+      padding: 0 24px 20px; color: var(--text-muted); line-height: 1.7;
+    }
+
+    .final-cta {
+      background: linear-gradient(135deg, var(--primary) 0%, #8B5CF6 100%);
+      color: white; padding: 80px 32px; text-align: center;
+      border-radius: var(--radius-lg); margin: 40px 0;
+    }
+    .final-cta h2 { font-size: clamp(28px, 4vw, 40px); font-weight: 800; margin-bottom: 16px; }
+    .final-cta p { font-size: 18px; opacity: 0.95; margin-bottom: 32px; max-width: 540px; margin-left: auto; margin-right: auto; }
+    .final-cta .btn-primary { background: white; color: var(--primary); }
+    .final-cta .btn-primary:hover { background: #F5F3FF; }
+
+    footer {
+      background: #F9FAFB; padding: 64px 0 32px;
+      border-top: 1px solid var(--border); color: var(--text-muted);
+    }
+    .footer-grid {
+      display: grid; grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px; margin-bottom: 40px;
+    }
+    @media (max-width: 720px) { .footer-grid { grid-template-columns: 1fr; } }
+    footer h4 { color: var(--text); font-size: 14px; font-weight: 700; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.05em; }
+    footer ul { list-style: none; }
+    footer ul li { margin-bottom: 8px; }
+    footer ul li a { color: var(--text-muted); font-size: 14px; }
+    footer ul li a:hover { color: var(--primary); }
+    .footer-legal {
+      padding-top: 32px; border-top: 1px solid var(--border);
+      font-size: 13px; line-height: 1.6;
+    }
+    .footer-legal strong { color: var(--text); }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <nav class="nav">
+      <a href="/" class="logo"><span class="emoji">≡ƒùú∩╕Å</span><span>Kid Speech AI</span></a>
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#how">How it works</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="#pricing" class="nav-cta">Start Free Trial</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>Unlock your child's <span class="accent">voice</span></h1>
+    <p class="subtitle">Fun daily speech practice for toddlers ages 3ΓÇô5. A friendly AI buddy helps your child build vocabulary through play ΓÇö screen time you can feel good about.</p>
+    <div class="hero-cta">
+      <a href="#pricing" class="btn btn-primary">Start 7-Day Free Trial</a>
+      <a href="#features" class="btn btn-secondary">See How It Works</a>
+    </div>
+    <div class="hero-badges">
+      <span>Γ£ô $30/month after trial</span>
+      <span>Γ£ô Cancel anytime</span>
+      <span>Γ£ô Available on Google Play</span>
+    </div>
+  </div>
+</section>
+
+<section class="block alt">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Why families love it</span>
+      <h2>Affordable daily speech practice</h2>
+      <p>Speech practice should be playful, daily, and within reach for every family ΓÇö a friendly supplement to professional speech-language pathology, not a replacement for it.</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="num">7.7%</div><div class="label">of U.S. children have a speech, voice, or language difference</div></div>
+      <div class="stat"><div class="num">6ΓÇô12 mo</div><div class="label">typical waitlist for a speech-language pathologist</div></div>
+      <div class="stat"><div class="num">$30/mo</div><div class="label">Kid Speech AI ΓÇö unlimited practice activities, every day</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="features">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">What's inside</span>
+      <h2>Fun & engaging speech practice</h2>
+      <p>Designed to build real vocabulary through play ΓÇö not mindless scrolling.</p>
+    </div>
+    <div class="features">
+      <div class="feature">
+        <div class="icon">≡ƒìÄ</div>
+        <h3>Object Naming</h3>
+        <p>Toddlers practice naming everyday things like "milk," "apple," and "shoe." The more words they recognize, the more they can ask for what they need.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">≡ƒÄ¿</div>
+        <h3>Descriptive Words</h3>
+        <p>Kids learn "red ball," "big ball," "soft ball" ΓÇö the building blocks of describing the world around them.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">≡ƒÅâ</div>
+        <h3>Action Words</h3>
+        <p>The AI narrates simple actions like "putting on shoes" or "washing hands," helping toddlers learn verbs for asking what they want.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">≡ƒÄÖ∩╕Å</div>
+        <h3>27 Friendly Voices</h3>
+        <p>Different voices, accents, and tones help kids recognize words across many speakers ΓÇö a skill that makes vocabulary stick.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">≡ƒîƒ</div>
+        <h3>Daily Affirmations</h3>
+        <p>A warm moment at the end of each session. Phrases like "I am brave" and "I can try" leave kids feeling good about practice.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">≡ƒöó</div>
+        <h3>Counting & Alphabet</h3>
+        <p>Gentle repetition builds counting from 1 to 100, plus the letters of the alphabet, at your child's pace.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">≡ƒÉ░</div>
+        <h3>Movement Breaks</h3>
+        <p>A cheerful AR character invites kids to stretch, hop, and move between sessions ΓÇö healthy daily routines through play.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">≡ƒôê</div>
+        <h3>Progress Log</h3>
+        <p>When your child says a word, the app celebrates and notes it in your weekly summary so you can see vocabulary building over time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block alt" id="how">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">How it works</span>
+      <h2>Three simple steps</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="num-circle">1</div>
+        <h3>Download the app</h3>
+        <p>Get Kid Speech AI from Google Play. Set up your child's profile ΓÇö name and age.</p>
+      </div>
+      <div class="step">
+        <div class="num-circle">2</div>
+        <h3>Start daily practice</h3>
+        <p>The AI creates personalized lessons. Your child plays games, practices sounds, and builds vocabulary ΓÇö 15 minutes a day is all it takes.</p>
+      </div>
+      <div class="step">
+        <div class="num-circle">3</div>
+        <h3>Watch them grow</h3>
+        <p>Track weekly progress in the parent dashboard. Share reports with your child's pediatrician or speech-language pathologist.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="pricing">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Pricing</span>
+      <h2>One simple plan</h2>
+      <p>Try Kid Speech AI free for 7 days. After that, $30/month ΓÇö cancel anytime through Google Play.</p>
+    </div>
+    <div class="pricing-wrap">
+      <div class="pricing-card">
+        <div class="price-label">KID SPEECH AI</div>
+        <div class="price">$30<small>/month</small></div>
+        <div class="trial">Γ£¿ 7-day free trial</div>
+        <ul>
+          <li>Unlimited AI speech-practice sessions</li>
+          <li>Personalized vocabulary lessons</li>
+          <li>Gamified learning for ages 3ΓÇô5</li>
+          <li>Parent progress dashboard</li>
+          <li>Weekly progress summaries</li>
+          <li>No ads, ever</li>
+          <li>Cancel anytime</li>
+        </ul>
+        <a href="#" class="play-btn">Γû╢ Coming soon to Google Play</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block alt" id="faq">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Frequently asked</span>
+      <h2>Common questions</h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>Is this a replacement for a speech therapist?</summary>
+        <div class="answer">No. Kid Speech AI is a daily-practice companion ΓÇö not therapy and not a replacement for a licensed speech-language pathologist. If you're worried about your child's speech development, please connect with a professional. Kid Speech AI is designed to make the time between professional visits playful and productive.</div>
+      </details>
+      <details>
+        <summary>What age is this for?</summary>
+        <div class="answer">The app is designed for toddlers ages 3 to 5 who are building early vocabulary. Every child develops at their own pace; please consult your pediatrician if you have concerns about your child's speech development.</div>
+      </details>
+      <details>
+        <summary>Is my child's data safe?</summary>
+        <div class="answer">Yes. Kid Speech AI is designed for the Google Play Families program and follows COPPA and GDPR-K data practices. We don't sell data. We don't show ads. Audio is encrypted in transit and is not used to train AI models. You can delete your data anytime from inside the app or by emailing support@kidspeechai.com.</div>
+      </details>
+      <details>
+        <summary>Can I cancel anytime?</summary>
+        <div class="answer">Yes. Your subscription is handled by Google Play. You can cancel anytime from the Play Store before your trial ends to avoid being charged, or anytime after to stop future renewals. You keep access until the end of your current billing period.</div>
+      </details>
+      <details>
+        <summary>How does the AI work?</summary>
+        <div class="answer">Kid Speech AI uses an AI character that speaks age-appropriate words and phrases from a curated, child-safe library. All audio is filtered before it reaches your child ΓÇö no scary, adult, or off-topic content. The AI is clearly introduced to parents as a computer program, not a therapist or a real person.</div>
+      </details>
+      <details>
+        <summary>What if my child has a diagnosed speech condition?</summary>
+        <div class="answer">Please consult a licensed speech-language pathologist for clinical guidance. Kid Speech AI is built for playful, daily vocabulary practice ΓÇö it's not a treatment and shouldn't replace professional care.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="container">
+    <div class="final-cta">
+      <h2>Every child deserves a voice</h2>
+      <p>Start your 7-day free trial today. After that, $30/month ΓÇö cancel anytime through Google Play.</p>
+      <a href="#" class="btn btn-primary">Γû╢ Coming soon to Google Play</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="margin-bottom: 12px;"><span class="emoji">≡ƒùú∩╕Å</span><span>Kid Speech AI</span></div>
+        <p style="font-size: 14px; color: var(--text-muted); max-width: 360px;">Fun, daily speech practice for toddlers ages 3ΓÇô5. Built for parents who want screen time that helps their child grow.</p>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#how">How it works</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/privacy/">Privacy Policy</a></li>
+          <li><a href="/terms/">Terms of Service</a></li>
+          <li><a href="/delete-account/">Delete Account</a></li>
+          <li><a href="mailto:support@kidspeechai.com">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <p><strong>Kid Speech AI is an educational app for early vocabulary practice.</strong> It is not medical advice, not a diagnostic tool, and not a substitute for a licensed speech-language pathologist. Always consult a qualified professional for clinical guidance about your child's development.</p>
+      <p style="margin-top: 16px;">┬⌐ 2026 Kid Speech AI. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
