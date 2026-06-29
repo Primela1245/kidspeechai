@@ -20,6 +20,24 @@
     gtag('config', 'G-SGPVY52ZZ2');
   </script>
 
+  <!-- Event snippet for Submit lead form conversion page -->
+  <script>
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-17186502559/x023CPeBidgaEJ_vlINA',
+        'value': 1.0,
+        'currency': 'USD',
+        'event_callback': callback
+    });
+    return false;
+  }
+  </script>
+
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -248,7 +266,7 @@
   <div class="vsl-cta-wrapper" id="vsl-download-btn">
     <form class="vsl-form" name="early-access" method="POST" data-netlify="true" action="/success.html">
       <input type="email" name="email" placeholder="Enter your best email..." required class="vsl-input">
-      <button type="submit" class="vsl-btn">Get App Here</button>
+      <button type="submit" class="vsl-btn" onclick="gtag_report_conversion()">Get App Here</button>
     </form>
     
     <div class="vsl-bullets">
