@@ -255,33 +255,50 @@
 
 </style>
 
-<section class="vsl-hero">
+<style>
+  .steps-container { display: flex; flex-direction: column; gap: 1.5rem; margin: 2rem auto; max-width: 600px; position: relative; z-index: 10; }
+  .step-card { background: #ffffff; border: 1px solid rgba(0, 0, 0, 0.05); border-radius: 16px; padding: 1.5rem; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03); text-align: left; }
+  .step-card h2 { font-size: 1.25rem; color: #ef4444; margin-bottom: 0.5rem; }
+  .step-card:nth-child(2) h2 { color: #ef4444; }
+  .step-card p { font-size: 0.95rem; color: #3D405B; margin-bottom: 1.25rem; }
+  .cta-step-btn { display: block; width: 100%; text-align: center; padding: 1rem 1.5rem; font-size: 1rem; font-weight: 700; font-family: inherit; color: white; border: none; border-radius: 100px; cursor: pointer; text-decoration: none; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+  .step-1-btn { background: linear-gradient(135deg, #fb7185, #fb923c); box-shadow: 0 4px 14px rgba(251, 113, 133, 0.3); }
+  .step-1-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(251, 113, 133, 0.4); color: white; }
+  .step-2-btn { background: linear-gradient(135deg, #38bdf8, #2563eb); box-shadow: 0 4px 14px rgba(56, 189, 248, 0.3); }
+  .step-2-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(56, 189, 248, 0.4); color: white; }
+  .disclaimer-note { font-size: 0.75rem; color: #3D405B; text-align: center; margin-top: 1rem; padding: 0 1rem; }
+  .video-container.vertical-video { padding-bottom: 177.77%; max-width: 315px; margin: 0 auto; position: relative; height: 0; overflow: hidden; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+  .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+</style>
+
+<section class="vsl-hero" style="background: radial-gradient(circle at top, #FFF9F5 0%, #FFE5EC 50%, #E0F4FF 100%);">
   <div class="hero-bg"></div>
   <div class="hero-particles"></div>
   
-  <div class="vsl-video-container" style="margin-top: 2rem;">
-    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/pYXev689aH4" title="Kid Speech AI VSL" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <div style="text-align: center; margin-bottom: 1rem; position: relative; z-index: 10;">
+    <h1 style="font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; color: #3D405B; margin-bottom: 0.5rem;">You're Almost In! 🎉</h1>
+    <p style="font-size: 1.125rem; color: #3D405B; max-width: 500px; margin: 0 auto;">Because the app is in its Google Closed Beta phase, you must complete these <strong>two quick steps</strong> to download it:</p>
   </div>
 
-  <div class="vsl-cta-wrapper" id="vsl-download-btn">
-    <form class="vsl-form" name="early-access" method="POST" data-netlify="true" action="/success.html">
-      <input type="email" name="email" placeholder="Enter your best email..." required class="vsl-input">
-      <button type="submit" class="vsl-btn" onclick="gtag_report_conversion()">Get App Here</button>
-    </form>
-    
-    <div class="vsl-bullets">
-      <div class="vsl-bullet">
-        <span class="vsl-bullet-icon">🎨</span>
-        <span><strong>AI Flashcard Overlays.</strong> Flashcards pop up right over their favorite videos and games without interrupting them!</span>
-      </div>
-      <div class="vsl-bullet">
-        <span class="vsl-bullet-icon">🎙️</span>
-        <span><strong>27 Friendly Voices.</strong> Gives your child the constant, patient repetition they need to learn everyday words.</span>
-      </div>
-      <div class="vsl-bullet">
-        <span class="vsl-bullet-icon">📈</span>
-        <span><strong>Weekly Progress Log.</strong> The app tracks every new word they say, so you can actually see their vocabulary grow.</span>
-      </div>
+  <div class="steps-container">
+    <div class="step-card">
+        <h2>Step 1: Join the Google Group</h2>
+        <p>Google only allows registered group members to download beta apps. Click below and click "Join Group".</p>
+        <a href="https://groups.google.com/g/kid-speech-ai-testers" target="_blank" class="cta-step-btn step-1-btn" onclick="if(typeof gtag_report_conversion === 'function') gtag_report_conversion();">1. JOIN GOOGLE GROUP</a>
+    </div>
+    <div class="step-card">
+        <h2>Step 2: Opt-In & Download</h2>
+        <p>Once you've joined the group, click below to accept the invitation and download from the Play Store.</p>
+        <a href="https://play.google.com/apps/testing/com.primela.actionnarrator" target="_blank" class="cta-step-btn step-2-btn">2. DOWNLOAD ON GOOGLE PLAY</a>
+    </div>
+    <p class="disclaimer-note">Note: You must be logged into the same Google/Gmail account on your browser that you use for the Google Play Store on your device.</p>
+  </div>
+
+  <div style="text-align: center; margin-top: 3rem; position: relative; z-index: 10;">
+    <h2 style="font-size: 1.5rem; margin-bottom: 0.5rem; color: #3D405B;">Want to see how it works?</h2>
+    <p style="color: #3D405B; margin-bottom: 1.5rem;">Watch this quick demo.</p>
+    <div class="video-container vertical-video">
+        <iframe width="315" height="560" src="https://www.youtube.com/embed/db_PPy6n7H8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
   </div>
 </section>
