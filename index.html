@@ -17,11 +17,11 @@
     gtag('js', new Date());
 
     gtag('config', 'AW-17186502559');
-    gtag('config', 'AW-7164018935');
     gtag('config', 'G-SGPVY52ZZ2');
   </script>
 
-  <!-- Event snippet for Submit lead form conversion page -->
+  <!-- Event snippet for Sign-up conversion page
+  In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
   <script>
   function gtag_report_conversion(url) {
     var callback = function () {
@@ -30,9 +30,7 @@
       }
     };
     gtag('event', 'conversion', {
-        'send_to': 'AW-7164018935/x023CPeBidgaEJ_vIINA',
-        'value': 1.0,
-        'currency': 'USD',
+        'send_to': 'AW-17186502559/eJJHCPPvks0cEJ_vlINA',
         'event_callback': callback
     });
     return false;
