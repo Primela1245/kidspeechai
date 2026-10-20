@@ -6,6 +6,11 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://kidspeechai.com/blog/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://kidspeechai.com/privacy.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -16,213 +21,63 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kidspeechai.com/delete-account.html</loc>
+    <loc>https://kidspeechai.com/blog/2026-10-20-how-to-help-late-talker-toddler-at-home.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://kidspeechai.com/blog/</loc>
-    <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kidspeechai.com/blog/2026-05-29-vocabulary-building-games.html</loc>
+    <loc>https://kidspeechai.com/blog/2026-10-19-point-and-name-ai-camera-object-naming-for-toddlers.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kidspeechai.com/blog/2026-05-29-hearing-and-speech.html</loc>
+    <loc>https://kidspeechai.com/blog/2026-10-18-turn-screen-time-into-active-word-learning-flashcard-overlays.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kidspeechai.com/blog/2026-05-28-play-based-speech-practice.html</loc>
+    <loc>https://kidspeechai.com/blog/2026-10-17-first-100-words-for-toddlers-parent-checklist.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kidspeechai.com/blog/2026-05-28-car-ride-speech-games.html</loc>
+    <loc>https://kidspeechai.com/blog/2026-10-16-action-words-verbs-for-toddlers-building-two-word-phrases.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kidspeechai.com/blog/2026-05-28-bilingual-speech-development.html</loc>
+    <loc>https://kidspeechai.com/blog/2026-10-15-custom-family-photo-and-video-flashcards-for-toddlers.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kidspeechai.com/blog/2026-05-27-screen-time-and-speech.html</loc>
+    <loc>https://kidspeechai.com/blog/2026-10-14-why-27-friendly-voices-help-toddlers-remember-words.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kidspeechai.com/blog/2026-05-27-hearing-and-speech.html</loc>
+    <loc>https://kidspeechai.com/blog/2026-10-13-descriptive-words-adjectives-colors-sizes-for-toddlers.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kidspeechai.com/blog/2026-05-27-early-intervention-overview.html</loc>
+    <loc>https://kidspeechai.com/blog/2026-10-12-mealtime-and-kitchen-vocabulary-games-for-toddlers.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kidspeechai.com/blog/2026-05-26-speech-milestones-by-age.html</loc>
+    <loc>https://kidspeechai.com/blog/2026-10-11-car-ride-and-stroller-word-games-for-toddlers.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kidspeechai.com/blog/2026-05-26-receptive-language-development.html</loc>
+    <loc>https://kidspeechai.com/blog/2026-10-10-movement-breaks-and-active-play-boost-toddler-speech.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kidspeechai.com/blog/2026-05-26-reading-aloud-benefits.html</loc>
+    <loc>https://kidspeechai.com/blog/2026-10-09-bilingual-toddler-vocabulary-supporting-two-languages-at-home.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://kidspeechai.com/blog/2026-05-25-screen-time-and-speech.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://kidspeechai.com/blog/2026-05-25-autism-speech-development.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://kidspeechai.com/blog/2026-05-24-when-to-see-speech-therapist.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://kidspeechai.com/blog/2026-05-24-play-based-speech-practice.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://kidspeechai.com/blog/2026-05-24-mealtime-vocabulary.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://kidspeechai.com/blog/2026-05-23-sign-language-and-speech.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://kidspeechai.com/blog/2026-05-23-play-based-speech-practice.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://kidspeechai.com/blog/2026-05-23-autism-speech-development.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://kidspeechai.com/blog/2026-05-22-when-to-see-speech-therapist.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://kidspeechai.com/blog/2026-05-22-play-based-speech-practice.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://kidspeechai.com/blog/2026-05-22-expressive-language-development.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://kidspeechai.com/blog/2026-05-21-sign-language-and-speech.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://kidspeechai.com/blog/2026-05-21-mealtime-vocabulary.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://kidspeechai.com/blog/2026-05-20-sign-language-and-speech.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://kidspeechai.com/blog/2026-05-20-car-ride-speech-games.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://kidspeechai.com/blog/2026-05-20-autism-speech-development.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://kidspeechai.com/blog/2026-05-19-vocabulary-building-games.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://kidspeechai.com/blog/2026-05-19-stuttering-in-toddlers.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://kidspeechai.com/blog/2026-05-19-articulation-development.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://kidspeechai.com/blog/2026-05-18-reading-aloud-benefits.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://kidspeechai.com/blog/2026-05-18-hearing-and-speech.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://kidspeechai.com/blog/2026-05-18-encouraging-first-words.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://kidspeechai.com/blog/2026-05-17-vocabulary-building-games.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://kidspeechai.com/blog/2026-05-17-mealtime-vocabulary.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://kidspeechai.com/blog/2026-05-16-play-based-speech-practice.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://kidspeechai.com/blog/2026-05-16-mealtime-vocabulary.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://kidspeechai.com/blog/2026-05-16-car-ride-speech-games.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://kidspeechai.com/blog/2026-05-14-receptive-language-development.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://kidspeechai.com/blog/2026-05-13-reading-aloud-benefits.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
 </urlset>
