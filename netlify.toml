@@ -21,6 +21,13 @@
   status = 301
   force = true
 
+# 301 Redirect legacy May 2026 duplicate blog URLs to clean Parent Guides hub
+[[redirects]]
+  from = "/blog/2026-05-*"
+  to = "/blog/"
+  status = 301
+  force = true
+
 # Pretty URLs for legal pages
 [[redirects]]
   from = "/privacy"

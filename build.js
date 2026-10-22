@@ -61,12 +61,13 @@ const corePages = [
   { loc: '/terms.html', changefreq: 'monthly', priority: '0.5' }
 ];
 
+const todayIso = new Date().toISOString().split('T')[0];
 let sitemapXml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
 for (const page of corePages) {
-  sitemapXml += `  <url>\n    <loc>${BASE_URL}${page.loc}</loc>\n    <changefreq>${page.changefreq}</changefreq>\n    <priority>${page.priority}</priority>\n  </url>\n`;
+  sitemapXml += `  <url>\n    <loc>${BASE_URL}${page.loc}</loc>\n    <lastmod>${todayIso}</lastmod>\n    <changefreq>${page.changefreq}</changefreq>\n    <priority>${page.priority}</priority>\n  </url>\n`;
 }
 for (const post of posts) {
-  sitemapXml += `  <url>\n    <loc>${BASE_URL}/blog/${post.filename}</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.8</priority>\n  </url>\n`;
+  sitemapXml += `  <url>\n    <loc>${BASE_URL}/blog/${post.filename}</loc>\n    <lastmod>${post.date}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.8</priority>\n  </url>\n`;
 }
 sitemapXml += '</urlset>\n';
 fs.writeFileSync(sitemapPath, sitemapXml, 'utf8');
