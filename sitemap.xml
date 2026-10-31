@@ -2,27 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://kidspeechai.com/</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-10-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://kidspeechai.com/blog/</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-10-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://kidspeechai.com/privacy.html</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://kidspeechai.com/terms.html</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://kidspeechai.com/blog/2026-10-30-why-kids-learn-words-through-repetition-the-2-second-look-and-say-rule.html</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://kidspeechai.com/blog/2026-10-30-waiting-room-restaurant-and-doctor-visit-word-games-for-toddlers.html</loc>
@@ -50,6 +56,36 @@
   </url>
   <url>
     <loc>https://kidspeechai.com/blog/2026-10-30-how-to-teach-toddlers-prepositions-in-on-under-with-real-objects.html</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kidspeechai.com/blog/2026-10-30-how-to-stop-screen-time-brain-rot-in-kids-ages-2-to-7-real-world-ai-play.html</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kidspeechai.com/blog/2026-10-30-how-real-time-action-narration-helps-kids-understand-whats-happening-around-them.html</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kidspeechai.com/blog/2026-10-30-ai-smart-glasses-for-kids-how-hands-free-real-world-narration-works.html</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kidspeechai.com/blog/2026-10-30-6-to-7-year-old-vocabulary-boosters-turning-curiosity-into-confident-speech.html</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kidspeechai.com/blog/2026-10-30-4-to-5-year-old-vocabulary-and-storytelling-games-at-home.html</loc>
     <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
