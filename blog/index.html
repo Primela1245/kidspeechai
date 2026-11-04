@@ -1,17 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17186502559"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'AW-17186502559');
-  gtag('config', 'G-SGPVY52ZZ2');
+  gtag("js", new Date());
+  gtag("config", "AW-17186502559");
+  gtag("config", "G-SGPVY52ZZ2");
+  (function(){
+    var loaded = false;
+    function loadGtag(){
+      if(loaded) return;
+      loaded = true;
+      var s = document.createElement("script");
+      s.async = true;
+      s.src = "https://www.googletagmanager.com/gtag/js?id=AW-17186502559";
+      document.head.appendChild(s);
+    }
+    ["mousemove","scroll","touchstart","click","keydown"].forEach(function(e){
+      window.addEventListener(e, loadGtag, {once:true, passive:true});
+    });
+    setTimeout(loadGtag, 3500);
+  })();
 </script>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Toddler Vocabulary & Late-Talker Parent Guides — Kid Speech AI Blog</title>
 <meta name="description" content="Practical, playful parent guides on helping toddlers talk more at home, first 100 words, real-world object naming, and active screen-time vocabulary routines."/>
 <link rel="canonical" href="https://kidspeechai.com/blog/"/>
@@ -20,10 +34,13 @@
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://kidspeechai.com/blog/"/>
 <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'"/>
+<noscript><link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"/></noscript>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--primary:#7C8CFF;--pink:#FF8FAB;--blue:#7CC4F2;--yellow:#FFD166;--mint:#95E1B3;--peach:#FFB5A7;--text:#2D2A4A;--text-muted:#6B6890;--bg-soft:#F7F4FF;--border:#E8E2FF}
+:root{--primary:#4338CA;--pink:#FF8FAB;--blue:#7CC4F2;--yellow:#FFD166;--mint:#95E1B3;--peach:#FFB5A7;--text:#2D2A4A;--text-muted:#6B6890;--bg-soft:#F7F4FF;--border:#E8E2FF}
 body{font-family:Nunito,-apple-system,sans-serif;color:var(--text);line-height:1.7;background:#FFFCF7}
 .container{max-width:1120px;margin:0 auto;padding:24px}
 header{background:white;border-bottom:2px solid var(--border);padding:14px 0;position:sticky;top:0;z-index:10}
@@ -56,7 +73,7 @@ footer a{color:var(--primary);text-decoration:none;font-weight:600}
 <body>
 <header>
   <div class="container">
-    <a href="/" class="logo"><img src="/mascot.png" class="logo-mascot" alt="Kid Speech AI mascot"/><span>Kid Speech AI</span></a>
+    <a href="/" class="logo"><img src="/mascot.png" class="logo-mascot" alt="Kid Speech AI mascot" width="42" height="42" decoding="async"/><span>Kid Speech AI</span></a>
     <a href="/" class="back">← Back to App Home</a>
   </div>
 </header>
