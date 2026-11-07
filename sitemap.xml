@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
     <loc>https://kidspeechai.com/</loc>
-    <lastmod>2026-11-05</lastmod>
+    <lastmod>2026-11-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <video:video>
@@ -16,21 +16,57 @@
   </url>
   <url>
     <loc>https://kidspeechai.com/blog/</loc>
-    <lastmod>2026-11-05</lastmod>
+    <lastmod>2026-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://kidspeechai.com/privacy.html</loc>
-    <lastmod>2026-11-05</lastmod>
+    <lastmod>2026-11-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://kidspeechai.com/terms.html</loc>
-    <lastmod>2026-11-05</lastmod>
+    <lastmod>2026-11-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://kidspeechai.com/blog/2026-11-06-weather-and-seasons-words-for-kids-sunny-rainy-windy-cold-window-watcher-games.html</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kidspeechai.com/blog/2026-11-06-toddler-substitutes-sounds-wabbit-for-rabbit-tat-for-cat-gentle-recasting-at-home.html</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kidspeechai.com/blog/2026-11-06-thanksgiving-and-holiday-dinner-table-word-games-for-toddlers-and-kids-ages-2-to-7.html</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kidspeechai.com/blog/2026-11-06-laundry-day-and-sorting-clothes-word-games-match-fold-in-out-for-toddlers.html</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kidspeechai.com/blog/2026-11-06-helping-shy-or-quiet-toddlers-talk-around-relatives-and-visitors-low-pressure-tips.html</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kidspeechai.com/blog/2026-11-06-brushing-teeth-and-handwashing-word-games-mirror-talk-routines-for-toddlers.html</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://kidspeechai.com/blog/2026-11-05-yes-and-no-questions-for-toddlers-how-to-move-past-head-shaking-to-real-words.html</loc>
