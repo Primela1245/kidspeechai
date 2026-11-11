@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
     <loc>https://kidspeechai.com/</loc>
-    <lastmod>2026-11-10</lastmod>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <video:video>
@@ -16,21 +16,57 @@
   </url>
   <url>
     <loc>https://kidspeechai.com/blog/</loc>
-    <lastmod>2026-11-10</lastmod>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://kidspeechai.com/privacy.html</loc>
-    <lastmod>2026-11-10</lastmod>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://kidspeechai.com/terms.html</loc>
-    <lastmod>2026-11-10</lastmod>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://kidspeechai.com/blog/2026-11-11-when-toddlers-call-everything-by-one-word-overextension-dog-for-all-animals-how-to-expand.html</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kidspeechai.com/blog/2026-11-11-waiting-turn-taking-and-board-game-words-for-preschoolers-my-turn-roll-count-move.html</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kidspeechai.com/blog/2026-11-11-mirror-play-and-making-silly-faces-lip-pops-tongue-clicks-and-sound-imitation-games.html</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kidspeechai.com/blog/2026-11-11-grocery-bags-unloading-and-pantry-sorting-word-games-heavy-light-cold-in-for-toddlers.html</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kidspeechai.com/blog/2026-11-11-gesture-to-word-bridge-pointing-waving-and-reaching-before-first-spoken-words.html</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kidspeechai.com/blog/2026-11-11-farm-animals-zoo-animals-and-ocean-creatures-sorting-and-sound-games-for-ages-2-to-7.html</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://kidspeechai.com/blog/2026-11-10-watching-your-mouth-and-syllable-games-ma-ma-ba-by-pu-ppy-for-toddler-speech-clarity.html</loc>
