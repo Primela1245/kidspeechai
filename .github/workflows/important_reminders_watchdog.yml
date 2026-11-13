@@ -1,0 +1,26 @@
+name: Kid Speech AI Important Reminders Watchdog (@AiKidBlogBot)
+
+on:
+  schedule:
+    # Runs every day at 17:00 UTC (9:00 AM Pacific Time) on GitHub's cloud servers
+    # 100% independent of your local computer (works even when your PC is turned off)
+    - cron: '0 17 * * *'
+  workflow_dispatch:
+
+jobs:
+  check-important-deadlines:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run Silent-Unless-Important Deadline Watchdog
+        env:
+          TZ: 'America/Los_Angeles'
+        run: |
+          python3 kid_speech_ai_telegram_watchdog.py
