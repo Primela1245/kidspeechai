@@ -1,0 +1,25 @@
+name: 24/7 Cloud Telegram Compliance Watchdogs (@SDGOV_bot & @AiKidBlogBot)
+
+on:
+  schedule:
+    # Runs every day at 16:30 UTC (8:30 AM PT) on GitHub Cloud Servers even when laptop is off!
+    - cron: '30 16 * * *'
+  workflow_dispatch:
+
+jobs:
+  run-watchdogs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run SD Government Solutions LLC Watchdog (@SDGOV_bot)
+        run: python sd_gov_telegram_watchdog.py
+
+      - name: Run Kid Speech AI Watchdog (@AiKidBlogBot)
+        run: python kid_speech_ai_telegram_watchdog.py
