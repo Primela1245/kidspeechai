@@ -19,32 +19,6 @@ def get_deadlines(today: datetime.date):
 
     return [
         {
-            "id": "md_emma_nov16_upload_check",
-            "title": "🛡️ Maryland eMMA #BPM059527 ($2.40M) Upload Check — Chief Albert Lemon",
-            "date": "2026-11-16",
-            "end_date": "2026-11-16",
-            "category": "SECURITY BID DEADLINE",
-            "action": (
-                "Confirm with Chief Albert Lemon (United Security Agency, LLC — chieflemon@unitedsecurityagencyllc.com) "
-                "that he uploaded 4_UPDATED_MASTER_eMMA_SUBMITTAL_BINDER_United_Security_Agency_BPM059527.pdf on Maryland eMMA!"
-            ),
-            "alert_days_before": [3, 2, 1, 0],
-            "daily_during_window": True,
-        },
-        {
-            "id": "orange_county_nov20_bid_opening",
-            "title": "🏆 County of Orange RFP #017-3034501-JC ($7.76M) Bid Opening Check!",
-            "date": "2026-11-20",
-            "end_date": "2026-11-20",
-            "category": "SEALED BID OPENING",
-            "action": (
-                "Check OpenGov Project #249227 (https://procurement.opengov.com/portal/ocgov/projects/249227) after 4:00 PM PT "
-                "for bid opening results on All Out Security Guard, Inc.'s sealed Proposal #616680 ($4,656,960 3-Yr / $7,761,600 5-Yr)!"
-            ),
-            "alert_days_before": [3, 1, 0],
-            "daily_during_window": False,
-        },
-        {
             "id": "nsf_sbir_pitch_decision_check",
             "title": "🔬 NSF SBIR Phase I ($305,000) Pitch #00131710 / #00132692 Status Check",
             "date": "2026-11-25",
@@ -72,7 +46,7 @@ def get_deadlines(today: datetime.date):
         },
         {
             "id": "ca_sellers_permit_cdtfa_annual_return",
-            "title": "🛒 CA Seller's Permit / CDTFA Annual Return (Account #: 245-279968)",
+            "title": "🛒 CA Seller's Permit to Sell Goods / CDTFA Annual Return (Account #: 245-279968)",
             "date": annual_date(1, 31),
             "end_date": annual_date(1, 31),
             "category": "CA SELLER'S PERMIT (CDTFA)",
@@ -138,7 +112,7 @@ def get_deadlines(today: datetime.date):
         },
         {
             "id": "el_cajon_business_license_check",
-            "title": "🏢 City of El Cajon Business License and CDTFA Mid-Year Check",
+            "title": "🏢 City of El Cajon Business License and CDTFA Seller's Permit Mid-Year Check",
             "date": annual_date(7, 31),
             "end_date": annual_date(7, 31),
             "category": "LOCAL PERMIT AND CDTFA",
@@ -240,7 +214,7 @@ def run_watchdog(force_summary: bool = False):
 
     if force_summary or urgent_alerts or is_monday_heartbeat or is_monthly_briefing:
         msg_parts = [
-            f"🏛️ <b>SD GOVERNMENT SOLUTIONS LLC — 24/7 CLOUD COMPLIANCE &amp; TAX WATCHDOG (@SDGOV_bot)</b>",
+            f"🏛️ <b>SD GOVERNMENT SOLUTIONS LLC — 24/7 CLOUD COMPLIANCE, PERMIT &amp; TAX WATCHDOG (@SDGOV_bot)</b>",
             f"📅 <b>Date:</b> {today.strftime('%A, %B %d, %Y')}",
             f"🏢 <b>Entity:</b> SD Government Solutions LLC",
             f"• <b>CA SOS Entity #:</b> <code>20260327479</code> (Formed <code>07/16/2026</code>)",
@@ -252,10 +226,10 @@ def run_watchdog(force_summary: bool = False):
             msg_parts.append("\n🔥 <b>URGENT ACTION ALERTS TODAY:</b>\n" + "\n\n".join(urgent_alerts))
 
         msg_parts.append(
-            "\n📋 <b>MASTER COMPLIANCE, PERMIT, TAX &amp; GRANT CALENDAR:</b>\n" + "\n\n".join(upcoming_lines)
+            "\n📋 <b>MASTER LLC, PERMIT, SAM.GOV, TAX &amp; GRANT CALENDAR:</b>\n" + "\n\n".join(upcoming_lines)
         )
         msg_parts.append(
-            "\n☁️ <i>24/7 Cloud Backup Active: This bot runs automatically on GitHub Cloud Servers every day at 8:30 AM PT even when your laptop is turned off!</i>"
+            "\n☁️ <i>24/7 Cloud Backup Active: Runs automatically on GitHub Cloud Servers every day at 8:30 AM PT even when your laptop is turned off!</i>"
         )
 
         send_telegram("\n".join(msg_parts))
@@ -268,7 +242,7 @@ def run_watchdog(force_summary: bool = False):
                 json.dump(state, f, indent=2)
         except Exception:
             pass
-        print("Sent @SDGOV_bot Telegram compliance summary successfully!")
+        print("Sent clean @SDGOV_bot compliance summary successfully!")
     else:
         print("No urgent alerts due today (quiet check passed).")
 
