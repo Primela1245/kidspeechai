@@ -78,7 +78,7 @@ def get_deadlines(today: datetime.date):
             "category": "CA SELLER'S PERMIT (CDTFA)",
             "action": (
                 "Log into https://onlineservices.cdtfa.ca.gov under CDTFA Account #245-279968 (SD Government Solutions LLC) "
-                "and file your annual Sales & Use Tax return (even if $0 taxable goods sold) so your California Seller's Permit "
+                "and file your annual Sales and Use Tax return (even if $0 taxable goods sold) so your California Seller's Permit "
                 "to sell goods is NEVER closed or revoked!"
             ),
             "alert_days_before": [30, 14, 7, 3, 2, 1, 0],
@@ -86,10 +86,10 @@ def get_deadlines(today: datetime.date):
         },
         {
             "id": "irs_1099_annual_tax_statements",
-            "title": "🧾 IRS 1099-NEC / 1099-K & Annual Tax Statements (FEIN: 42-3932513)",
+            "title": "🧾 IRS 1099-NEC / 1099-K and Annual Tax Statements (FEIN: 42-3932513)",
             "date": annual_date(1, 31),
             "end_date": annual_date(1, 31),
-            "category": "TAXES & 1099 COMPLIANCE",
+            "category": "TAXES AND 1099 COMPLIANCE",
             "action": (
                 "Download annual bank, Stripe, and Google Play tax statements for SD Government Solutions LLC (FEIN: 42-3932513) "
                 "and verify any 1099-NEC / 1099-K forms before January 31."
@@ -102,7 +102,7 @@ def get_deadlines(today: datetime.date):
             "title": "🏛️ March 15 LLC / Partnership Tax Return Check (Form 1065 / CA Form 568)",
             "date": annual_date(3, 15),
             "end_date": annual_date(3, 15),
-            "category": "FEDERAL & CA TAXES",
+            "category": "FEDERAL AND CA TAXES",
             "action": (
                 "Verify whether SD Government Solutions LLC (FEIN: 42-3932513 | CA SOS: #20260327479) files on March 15 "
                 "(Partnership) or April 15 (Single-Member LLC) and file/extend on time to avoid any FTB penalty."
@@ -115,10 +115,10 @@ def get_deadlines(today: datetime.date):
             "title": "💰 MANDATORY: CA LLC $800 Annual Franchise Tax (Form 3522) + Tax Return",
             "date": annual_date(4, 15),
             "end_date": annual_date(4, 15),
-            "category": "CA LLC $800 TAX & IRS RETURN",
+            "category": "CA LLC $800 TAX AND IRS RETURN",
             "action": (
                 "Pay California FTB $800 Annual LLC Tax (Form 3522 at https://www.ftb.ca.gov/pay/) + file CA Form 568 "
-                "& Federal Tax Return for SD Government Solutions LLC (CA SOS #20260327479, FEIN 42-3932513) by April 15!"
+                "and Federal Tax Return for SD Government Solutions LLC (CA SOS #20260327479, FEIN 42-3932513) by April 15!"
             ),
             "alert_days_before": [45, 30, 21, 14, 7, 5, 3, 2, 1, 0],
             "daily_during_window": False,
@@ -138,10 +138,10 @@ def get_deadlines(today: datetime.date):
         },
         {
             "id": "el_cajon_business_license_check",
-            "title": "🏢 City of El Cajon Business License & CDTFA Mid-Year Check",
+            "title": "🏢 City of El Cajon Business License and CDTFA Mid-Year Check",
             "date": annual_date(7, 31),
             "end_date": annual_date(7, 31),
-            "category": "LOCAL PERMIT & CDTFA",
+            "category": "LOCAL PERMIT AND CDTFA",
             "action": (
                 "Check City of El Cajon Business License renewal (1229 Linalda Dr, El Cajon, CA 92021) and verify "
                 "CDTFA Seller's Permit #245-279968 status at https://onlineservices.cdtfa.ca.gov."
@@ -166,11 +166,12 @@ def get_deadlines(today: datetime.date):
 
 
 def send_telegram(html_text: str):
+    safe_html = html_text.replace(" & ", " &amp; ")
     url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
     payload = json.dumps(
         {
             "chat_id": CHAT_ID,
-            "text": html_text,
+            "text": safe_html[:4050],
             "parse_mode": "HTML",
             "disable_web_page_preview": True,
         }
@@ -239,7 +240,7 @@ def run_watchdog(force_summary: bool = False):
 
     if force_summary or urgent_alerts or is_monday_heartbeat or is_monthly_briefing:
         msg_parts = [
-            f"🏛️ <b>SD GOVERNMENT SOLUTIONS LLC — 24/7 CLOUD COMPLIANCE & TAX WATCHDOG (@SDGOV_bot)</b>",
+            f"🏛️ <b>SD GOVERNMENT SOLUTIONS LLC — 24/7 CLOUD COMPLIANCE &amp; TAX WATCHDOG (@SDGOV_bot)</b>",
             f"📅 <b>Date:</b> {today.strftime('%A, %B %d, %Y')}",
             f"🏢 <b>Entity:</b> SD Government Solutions LLC",
             f"• <b>CA SOS Entity #:</b> <code>20260327479</code> (Formed <code>07/16/2026</code>)",
@@ -251,7 +252,7 @@ def run_watchdog(force_summary: bool = False):
             msg_parts.append("\n🔥 <b>URGENT ACTION ALERTS TODAY:</b>\n" + "\n\n".join(urgent_alerts))
 
         msg_parts.append(
-            "\n📋 <b>MASTER COMPLIANCE, PERMIT, TAX & GRANT CALENDAR:</b>\n" + "\n\n".join(upcoming_lines)
+            "\n📋 <b>MASTER COMPLIANCE, PERMIT, TAX &amp; GRANT CALENDAR:</b>\n" + "\n\n".join(upcoming_lines)
         )
         msg_parts.append(
             "\n☁️ <i>24/7 Cloud Backup Active: This bot runs automatically on GitHub Cloud Servers every day at 8:30 AM PT even when your laptop is turned off!</i>"
