@@ -43,6 +43,69 @@ function escapeXml(str) {
     .replace(/'/g, '&apos;');
 }
 
+// 1. Inject / Update "Related Parent Guides & Checklists" Internal Cross-Linking Mesh across all blog posts
+const pillarFilenames = [
+  '2026-10-17-first-100-words-for-toddlers-parent-checklist.html',
+  '2026-11-08-total-conceptual-vocabulary-for-bilingual-toddlers-counting-spanish-and-english-words.html',
+  '2026-10-21-toddler-points-and-grunts-instead-of-talking-how-to-help.html',
+  '2026-11-05-sequence-words-for-kids-first-next-then-last-daily-routine-storytelling-ages-2-to-7.html'
+];
+const postByFilename = new Map(posts.map(p => [p.filename, p]));
+
+let crossLinkedCount = 0;
+for (let i = 0; i < posts.length; i++) {
+  const current = posts[i];
+  const filePath = path.join(blogDir, current.filename);
+  let html = fs.readFileSync(filePath, 'utf8');
+
+  // Pick 6 unique related guides: 2 pillar guides + 4 rotating mesh neighbors so every post gets incoming links
+  const related = [];
+  const seen = new Set([current.filename]);
+
+  for (const pf of pillarFilenames) {
+    if (related.length >= 2) break;
+    if (!seen.has(pf) && postByFilename.has(pf)) {
+      related.push(postByFilename.get(pf));
+      seen.add(pf);
+    }
+  }
+
+  const offsets = [1, 2, 5, 11, 19, 29, 41];
+  for (const off of offsets) {
+    if (related.length >= 6) break;
+    const candidate = posts[(i + off) % posts.length];
+    if (candidate && !seen.has(candidate.filename)) {
+      related.push(candidate);
+      seen.add(candidate.filename);
+    }
+  }
+
+  const cardsHtml = related.map(r => `      <a href="/blog/${r.filename}" style="display:block;background:#FFFFFF;border:2px solid #E2DCFF;border-radius:16px;padding:16px 18px;text-decoration:none;color:#1E243B;transition:transform 0.15s ease,box-shadow 0.15s ease;box-shadow:0 4px 12px rgba(30,36,59,0.04)">
+        <div style="font-size:12.5px;font-weight:800;color:#4338CA;margin-bottom:6px">${r.emoji} ${formatDate(r.date)}</div>
+        <div style="font-family:Fredoka,sans-serif;font-size:16.5px;font-weight:700;line-height:1.35;color:#1E243B;margin-bottom:6px">${r.title}</div>
+        <span style="font-size:13.5px;font-weight:800;color:#4338CA">Read Guide &rarr;</span>
+      </a>`).join('\n');
+
+  const relatedSection = `<section id="related-parent-guides" class="container" style="margin-top:8px;margin-bottom:32px">
+  <div style="background:#F7F4FF;border:2px solid #E2DCFF;border-radius:22px;padding:26px 24px">
+    <h2 style="font-family:Fredoka,sans-serif;font-size:22px;font-weight:700;color:#1E243B;margin:0 0 6px">More Toddler Speech &amp; Vocabulary Parent Guides</h2>
+    <p style="font-size:14.5px;color:#5A607F;font-weight:600;margin:0 0 18px">Explore related first-word checklists, daily play routines, and milestone guides:</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px">
+${cardsHtml}
+    </div>
+  </div>
+</section>\n\n`;
+
+  // Remove any previous related-parent-guides section before re-inserting
+  html = html.replace(/<section id="related-parent-guides"[\s\S]*?<\/section>\s*/g, '');
+  if (html.includes('<footer')) {
+    html = html.replace('<footer', relatedSection + '<footer');
+    fs.writeFileSync(filePath, html, 'utf8');
+    crossLinkedCount++;
+  }
+}
+console.log(`✅ Injected 6-link internal SEO cross-linking mesh into ${crossLinkedCount} blog posts.`);
+
 const postsHtml = posts.map(p => `<a class="post-card" href="/blog/${p.filename}">
   <div class="post-hero ${p.bg}">${p.emoji}</div>
   <div class="post-body">
@@ -91,7 +154,7 @@ console.log(`✅ Generated sitemap.xml with ${corePages.length + posts.length} U
 const rssPath = path.join(__dirname, 'rss.xml');
 const nowRfc822 = new Date().toUTCString();
 let rssXml = `<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.com/2005/Atom">
   <channel>
     <title>Kid Speech AI — Toddler Vocabulary &amp; Late-Talker Parent Guides</title>
     <link>${BASE_URL}/blog/</link>
