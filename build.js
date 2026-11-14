@@ -125,6 +125,26 @@ if (replacementRegex.test(blogIndexContent)) {
   console.log('✅ Updated blog/index.html statically.');
 }
 
+// Update Homepage (index.html) with the 6 newest daily Parent Guides for instant homepage crawl & PageRank
+const homeIndexPath = path.join(__dirname, 'index.html');
+if (fs.existsSync(homeIndexPath)) {
+  let homeContent = fs.readFileSync(homeIndexPath, 'utf8');
+  const latestRegex = /(<!-- LATEST_GUIDES_START -->)[\s\S]*?(<!-- LATEST_GUIDES_END -->)/;
+  if (latestRegex.test(homeContent)) {
+    const latestCards = posts.slice(0, 6).map(p => `      <a class="blog-card" href="/blog/${p.filename}">
+        <div>
+          <div class="blog-card-emoji">${p.emoji}</div>
+          <h3>${p.title}</h3>
+          <p>${p.description}</p>
+        </div>
+        <span class="more">Read Parent Guide (${formatDate(p.date)}) &rarr;</span>
+      </a>`).join('\n');
+    homeContent = homeContent.replace(latestRegex, `$1\n    <div class="blog-grid">\n${latestCards}\n    </div>\n    $2`);
+    fs.writeFileSync(homeIndexPath, homeContent, 'utf8');
+    console.log('✅ Updated Homepage (index.html) with the 6 newest daily Parent Guides.');
+  }
+}
+
 const sitemapPath = path.join(__dirname, 'sitemap.xml');
 const BASE_URL = 'https://kidspeechai.com';
 const corePages = [

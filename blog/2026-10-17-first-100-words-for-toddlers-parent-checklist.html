@@ -180,7 +180,113 @@ footer a{color:#7CC4F2;text-decoration:none;font-weight:700}
     <p>A toddler who can say <strong>"milk," "open," "more," "help,"</strong> and <strong>"up"</strong> can communicate their wants and feelings 50+ times a day. Combining everyday nouns with early action verbs and social request words is what bridges the gap from single words (12–18 months) to two-word phrases (18–24 months).</p>
 
     <h2>The Complete Baby's First 100 Words List (6 Speech &amp; Language Categories)</h2>
-    <p>Use this <strong>first 100 words list for speech and language</strong> as your at-home <strong>first words checklist</strong>. Remember: consistent word approximations (like <em>"ba"</em> for ball or <em>"wawa"</em> for water), animal sounds (<em>"moo," "woof"</em>), and baby signs all count!</p>
+    <p>Use this <strong>first 100 words list for speech and language</strong> as your interactive at-home <strong>first words checklist</strong>. Tap any word below that your toddler already says (animal sounds like <em>"moo"</em>, baby signs, and consistent approximations like <em>"ba"</em> for ball all count!)—your progress saves automatically on your phone:</p>
+
+    <div id="interactive-100-checklist" style="background:#FFFFFF;border:2px solid #C7D2FE;border-radius:20px;padding:22px;margin:22px 0 28px;box-shadow:0 10px 26px rgba(67,56,202,0.07)">
+      <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px">
+        <div>
+          <div style="font-family:Fredoka,sans-serif;font-size:21px;font-weight:700;color:#1E243B">📋 Interactive First 100 Words Tracker</div>
+          <div id="checklist-milestone-msg" style="font-size:14.5px;color:#4338CA;font-weight:800;margin-top:2px">Tap the words your child says, signs, or approximates!</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px">
+          <span id="checklist-count-badge" style="background:#4338CA;color:#FFFFFF;font-family:Fredoka,sans-serif;font-size:17px;font-weight:700;padding:7px 16px;border-radius:999px">0 / 100 Words</span>
+          <button type="button" onclick="window.print()" style="background:#F7F4FF;border:2px solid #C7D2FE;color:#4338CA;font-family:Fredoka,sans-serif;font-size:14px;font-weight:700;padding:7px 14px;border-radius:999px;cursor:pointer">🖨️ Print List</button>
+          <button type="button" id="checklist-reset-btn" style="background:#FFF1F2;border:1px solid #FECDD3;color:#BE123C;font-size:13px;font-weight:800;padding:7px 12px;border-radius:999px;cursor:pointer">Reset</button>
+        </div>
+      </div>
+      <div style="width:100%;height:12px;background:#EEF2FF;border-radius:999px;overflow:hidden;margin-bottom:18px">
+        <div id="checklist-progress-bar" style="width:0%;height:100%;background:linear-gradient(90deg,#4338CA,#EC4899);transition:width 0.25s ease"></div>
+      </div>
+      <div id="checklist-pills-root"></div>
+    </div>
+    <script>
+    (function(){
+      var categories = [
+        { title: "1. People, Family & Pets (10)", words: ["Mama","Dada","Baby","Grandma / Nana","Grandpa / Papa","Dog / Puppy","Cat / Kitty","Bird","Me / Mine","Own Name"] },
+        { title: "2. Social Power & Request Words (15)", words: ["More","All done","Please","Thank you","Help","Yes / Yeah","No","Hi / Hello","Bye-bye","Uh-oh!","Whee!","Yay!","Oh no!","Peekaboo","Shh!"] },
+        { title: "3. Favorite Foods & Mealtime (20)", words: ["Milk","Water","Banana","Apple","Cracker","Cheese","Bread / Toast","Berry","Egg","Pasta / Noodle","Cookie","Juice","Cup","Spoon","Bowl","Plate","Bib","Chair","Yummy / Mmm","Yucky"] },
+        { title: "4. Toys, Body & Household (25)", words: ["Ball","Car","Truck","Bus","Train","Airplane","Block","Book","Bubbles","Doll / Bear","Shoe","Sock","Hat","Diaper / Potty","Shirt / Pants","Bed","Blanket","Bath","Door","Light","Nose","Eyes","Mouth","Hands","Feet / Toes"] },
+        { title: "5. Early Action Verbs (15)", words: ["Go","Stop","Open","Close / Shut","Eat","Drink","Sleep","Wash","Push","Pull","Jump","Fall","Hug / Kiss","Look / See","Want"] },
+        { title: "6. Location & Describing Words (15)", words: ["Up","Down","In","Out","On","Off","Big","Little","Hot","Cold","Wet","Dirty / Messy","Clean","Fast","Happy / Sad"] }
+      ];
+      var KEY = "ksai_first_100_words_v1";
+      var saved = {};
+      try { saved = JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch(e){}
+      var root = document.getElementById("checklist-pills-root");
+      var badge = document.getElementById("checklist-count-badge");
+      var bar = document.getElementById("checklist-progress-bar");
+      var msg = document.getElementById("checklist-milestone-msg");
+      if(!root) return;
+
+      function updateSummary(){
+        var count = Object.keys(saved).filter(function(k){ return !!saved[k]; }).length;
+        badge.textContent = count + " / 100 Words";
+        bar.style.width = Math.min(100, count) + "%";
+        if(count === 0) msg.textContent = "Tap the words your child says, signs, or approximates!";
+        else if(count < 15) msg.textContent = "🌱 Great start! (1–15 words is typical for 12–15 months)";
+        else if(count < 50) msg.textContent = "🚀 Growing fast! (15–50 words is typical for 15–18 months)";
+        else if(count < 85) msg.textContent = "🌟 50+ Word Milestone! Time to combine Action Verbs + Nouns into 2-word phrases!";
+        else msg.textContent = "🏆 First 100 Words Superstar! Ready for 3-word sentences & storytelling!";
+      }
+
+      categories.forEach(function(cat){
+        var group = document.createElement("div");
+        group.style.marginBottom = "14px";
+        var h = document.createElement("div");
+        h.style.fontFamily = "Fredoka,sans-serif";
+        h.style.fontSize = "15.5px";
+        h.style.fontWeight = "700";
+        h.style.color = "#1E243B";
+        h.style.marginBottom = "8px";
+        h.textContent = cat.title;
+        group.appendChild(h);
+
+        var wrap = document.createElement("div");
+        wrap.style.display = "flex";
+        wrap.style.flexWrap = "wrap";
+        wrap.style.gap = "7px";
+
+        cat.words.forEach(function(w){
+          var btn = document.createElement("button");
+          btn.type = "button";
+          function styleBtn(){
+            var on = !!saved[w];
+            btn.style.border = on ? "2px solid #4338CA" : "1.5px solid #D4C5FF";
+            btn.style.background = on ? "#EEF2FF" : "#FFFCF7";
+            btn.style.color = on ? "#312E81" : "#1E243B";
+            btn.style.fontWeight = "800";
+            btn.style.fontSize = "13.5px";
+            btn.style.padding = "5px 11px";
+            btn.style.borderRadius = "999px";
+            btn.style.cursor = "pointer";
+            btn.textContent = (on ? "✅ " : "⬜ ") + w;
+          }
+          styleBtn();
+          btn.addEventListener("click", function(){
+            saved[w] = !saved[w];
+            try { localStorage.setItem(KEY, JSON.stringify(saved)); } catch(e){}
+            styleBtn();
+            updateSummary();
+          });
+          wrap.appendChild(btn);
+        });
+        group.appendChild(wrap);
+        root.appendChild(group);
+      });
+
+      var resetBtn = document.getElementById("checklist-reset-btn");
+      if(resetBtn){
+        resetBtn.addEventListener("click", function(){
+          saved = {};
+          try { localStorage.removeItem(KEY); } catch(e){}
+          root.innerHTML = "";
+          categories.forEach(function(c){});
+          location.reload();
+        });
+      }
+      updateSummary();
+    })();
+    </script>
 
     <ul>
       <li><strong>1. People, Family &amp; Pets (10 Words):</strong><br/>
