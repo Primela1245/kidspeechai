@@ -2,7 +2,7 @@ import os
 import glob
 from PIL import Image, ImageDraw, ImageFont
 
-OUT_DIR = r"C:\Users\prime\Desktop\2026\Pinterest_Pins"
+OUT_DIR = r"C:\Users\prime\Desktop\Pinterest_Pins"
 REPO_PIN_DIR = r"C:\Users\prime\Desktop\2026\kidspeechai_repo\pinterest_pins"
 FEAT_DIR = r"C:\Users\prime\Desktop\2026\kidspeechai_repo\images\features"
 
