@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
     <loc>https://kidspeechai.com/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <video:video>
@@ -16,21 +16,57 @@
   </url>
   <url>
     <loc>https://kidspeechai.com/blog/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://kidspeechai.com/privacy.html</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://kidspeechai.com/terms.html</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://kidspeechai.com/blog/2026-11-18-when-toddlers-only-use-nouns-how-to-add-verbs-adjectives-and-social-words-for-real-sentences.html</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kidspeechai.com/blog/2026-11-18-verbal-routines-and-fill-in-the-blank-pause-games-ready-set-go-peekaboo-for-late-talkers.html</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kidspeechai.com/blog/2026-11-18-teaching-toddlers-descriptive-size-and-weight-words-big-little-heavy-light-tall-short.html</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kidspeechai.com/blog/2026-11-18-pacifier-thumb-sucking-and-sippy-cup-weaning-for-clearer-toddler-speech-and-tongue-tip-sounds.html</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kidspeechai.com/blog/2026-11-18-hide-and-seek-and-where-is-it-object-permanence-word-games-under-behind-found-it-for-toddlers.html</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kidspeechai.com/blog/2026-11-18-backyard-gardening-watering-plants-and-bug-hunt-words-dig-pour-grow-flower-worm-for-kids.html</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://kidspeechai.com/blog/2026-11-17-interactive-lift-the-flap-books-and-knock-knock-doors-peek-open-who-is-there-word-games.html</loc>
