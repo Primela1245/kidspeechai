@@ -22,15 +22,16 @@ DEADLINES = [
         "daily_during_window": True,
     },
     {
-        "id": "nsf_sbir_pitch_decision_check",
-        "title": "🔬 NSF SBIR Phase I ($305,000) Pitch #00132692 Status Check",
-        "date": "2026-11-25",
-        "end_date": "2026-12-05",
+        "id": "nsf_sbir_pitch_annual_window_reopens",
+        "title": "🔬 NSF SBIR Phase I ($305,000) Annual Project Pitch Window Reopens (2 Pitches/Yr Reset)",
+        "date": "2027-10-30",
+        "end_date": "2027-11-05",
         "action": (
-            "Check ceo@sdgovernmentsolutions.com and NSF Seed Fund Portal (https://nsfgov.my.site.com/mywork/s/) "
-            "for Program Director invitation on Pitch #00132692 so we can submit the full $305,000 NSF Phase I proposal."
+            "Your 12-month NSF Project Pitch limit (from Oct 30, 2026) has officially reset! Submit a brand-new "
+            "deep-tech R&D Project Pitch on the NSF Seed Fund Portal focusing strictly on high-risk on-device neural "
+            "acoustic/kinematic DSP innovation (addressing Dr. Lindsay Portnoy's Nov 20, 2026 feedback)."
         ),
-        "alert_days_before": [0, -10],
+        "alert_days_before": [7, 0],
         "daily_during_window": False,
     },
     {
