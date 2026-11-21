@@ -21,93 +21,213 @@
   status = 301
   force = true
 
-# Topic-Specific 301 Redirects for Legacy May 2026 URLs Still Ranking on Page 1 of Google
+# Exact 1-to-1 301 Redirects for Legacy May 2026 URLs Still Ranking on Page 1 of Google
 [[redirects]]
-  from = "/blog/2026-05-*-mealtime-vocabulary.html"
+  from = "/blog/2026-05-16-mealtime-vocabulary.html"
   to = "/blog/2026-10-12-mealtime-and-kitchen-vocabulary-games-for-toddlers.html"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/blog/2026-05-*-car-ride-speech-games.html"
+  from = "/blog/2026-05-17-mealtime-vocabulary.html"
+  to = "/blog/2026-10-12-mealtime-and-kitchen-vocabulary-games-for-toddlers.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/2026-05-21-mealtime-vocabulary.html"
+  to = "/blog/2026-10-12-mealtime-and-kitchen-vocabulary-games-for-toddlers.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/2026-05-24-mealtime-vocabulary.html"
+  to = "/blog/2026-10-12-mealtime-and-kitchen-vocabulary-games-for-toddlers.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/2026-05-16-car-ride-speech-games.html"
   to = "/blog/2026-10-11-car-ride-and-stroller-word-games-for-toddlers.html"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/blog/2026-05-*-sign-language-and-speech.html"
+  from = "/blog/2026-05-20-car-ride-speech-games.html"
+  to = "/blog/2026-10-11-car-ride-and-stroller-word-games-for-toddlers.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/2026-05-28-car-ride-speech-games.html"
+  to = "/blog/2026-10-11-car-ride-and-stroller-word-games-for-toddlers.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/2026-05-20-sign-language-and-speech.html"
   to = "/blog/2026-10-21-toddler-points-and-grunts-instead-of-talking-how-to-help.html"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/blog/2026-05-*-screen-time-and-speech.html"
+  from = "/blog/2026-05-21-sign-language-and-speech.html"
+  to = "/blog/2026-10-21-toddler-points-and-grunts-instead-of-talking-how-to-help.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/2026-05-23-sign-language-and-speech.html"
+  to = "/blog/2026-10-21-toddler-points-and-grunts-instead-of-talking-how-to-help.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/2026-05-25-screen-time-and-speech.html"
   to = "/blog/2026-10-18-turn-screen-time-into-active-word-learning-flashcard-overlays.html"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/blog/2026-05-*-reading-aloud-benefits.html"
+  from = "/blog/2026-05-27-screen-time-and-speech.html"
+  to = "/blog/2026-10-18-turn-screen-time-into-active-word-learning-flashcard-overlays.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/2026-05-13-reading-aloud-benefits.html"
   to = "/blog/2026-10-15-custom-family-photo-and-video-flashcards-for-toddlers.html"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/blog/2026-05-*-encouraging-first-words.html"
+  from = "/blog/2026-05-18-reading-aloud-benefits.html"
+  to = "/blog/2026-10-15-custom-family-photo-and-video-flashcards-for-toddlers.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/2026-05-26-reading-aloud-benefits.html"
+  to = "/blog/2026-10-15-custom-family-photo-and-video-flashcards-for-toddlers.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/2026-05-18-encouraging-first-words.html"
   to = "/blog/2026-10-17-first-100-words-for-toddlers-parent-checklist.html"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/blog/2026-05-*-vocabulary-building-games.html"
+  from = "/blog/2026-05-17-vocabulary-building-games.html"
   to = "/blog/2026-10-17-first-100-words-for-toddlers-parent-checklist.html"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/blog/2026-05-*-play-based-speech-practice.html"
+  from = "/blog/2026-05-19-vocabulary-building-games.html"
+  to = "/blog/2026-10-17-first-100-words-for-toddlers-parent-checklist.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/2026-05-29-vocabulary-building-games.html"
+  to = "/blog/2026-10-17-first-100-words-for-toddlers-parent-checklist.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/2026-05-16-play-based-speech-practice.html"
   to = "/blog/2026-10-16-action-words-verbs-for-toddlers-building-two-word-phrases.html"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/blog/2026-05-*-expressive-language-development.html"
+  from = "/blog/2026-05-22-play-based-speech-practice.html"
+  to = "/blog/2026-10-16-action-words-verbs-for-toddlers-building-two-word-phrases.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/2026-05-23-play-based-speech-practice.html"
+  to = "/blog/2026-10-16-action-words-verbs-for-toddlers-building-two-word-phrases.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/2026-05-24-play-based-speech-practice.html"
+  to = "/blog/2026-10-16-action-words-verbs-for-toddlers-building-two-word-phrases.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/2026-05-28-play-based-speech-practice.html"
+  to = "/blog/2026-10-16-action-words-verbs-for-toddlers-building-two-word-phrases.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/2026-05-22-expressive-language-development.html"
   to = "/blog/2026-10-21-3-year-old-sentence-building-expanding-words-at-home.html"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/blog/2026-05-*-receptive-language-development.html"
+  from = "/blog/2026-05-14-receptive-language-development.html"
   to = "/blog/2026-10-21-toddler-understands-everything-but-wont-talk-parent-guide.html"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/blog/2026-05-*-bilingual-speech-development.html"
+  from = "/blog/2026-05-26-receptive-language-development.html"
+  to = "/blog/2026-10-21-toddler-understands-everything-but-wont-talk-parent-guide.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/2026-05-28-bilingual-speech-development.html"
   to = "/blog/2026-11-08-total-conceptual-vocabulary-for-bilingual-toddlers-counting-spanish-and-english-words.html"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/blog/2026-05-*-speech-milestones-by-age.html"
+  from = "/blog/2026-05-26-speech-milestones-by-age.html"
   to = "/blog/2026-10-17-first-100-words-for-toddlers-parent-checklist.html"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/blog/2026-05-*-when-to-see-speech-therapist.html"
+  from = "/blog/2026-05-22-when-to-see-speech-therapist.html"
   to = "/blog/2026-10-20-how-to-help-late-talker-toddler-at-home.html"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/blog/2026-05-*-early-intervention-overview.html"
+  from = "/blog/2026-05-24-when-to-see-speech-therapist.html"
   to = "/blog/2026-10-20-how-to-help-late-talker-toddler-at-home.html"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/blog/2026-05-*-autism-speech-development.html"
+  from = "/blog/2026-05-27-early-intervention-overview.html"
+  to = "/blog/2026-10-20-how-to-help-late-talker-toddler-at-home.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/2026-05-20-autism-speech-development.html"
+  to = "/blog/2026-11-08-gestalt-language-processing-for-parents-helping-kids-move-from-scripts-to-own-words.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/2026-05-23-autism-speech-development.html"
+  to = "/blog/2026-11-08-gestalt-language-processing-for-parents-helping-kids-move-from-scripts-to-own-words.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/2026-05-25-autism-speech-development.html"
   to = "/blog/2026-11-08-gestalt-language-processing-for-parents-helping-kids-move-from-scripts-to-own-words.html"
   status = 301
   force = true
