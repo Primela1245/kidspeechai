@@ -19,16 +19,16 @@ def get_deadlines(today: datetime.date):
 
     return [
         {
-            "id": "nsf_sbir_pitch_decision_check",
-            "title": "🔬 NSF SBIR Phase I ($305,000) Pitch #00131710 / #00132692 Status Check",
-            "date": "2026-11-25",
-            "end_date": "2026-12-05",
+            "id": "nsf_sbir_pitch_annual_window_reopens",
+            "title": "🔬 NSF SBIR Phase I ($305,000) Annual Project Pitch Window Reopens (2 Pitches/Yr Reset)",
+            "date": "2027-10-30",
+            "end_date": "2027-11-05",
             "category": "FEDERAL GRANTS ($305K)",
             "action": (
-                "Check ceo@sdgovernmentsolutions.com and NSF Seed Fund Portal (https://nsfgov.my.site.com/mywork/s/) "
-                "for Program Director invitation to submit full $305,000 NSF Phase I proposal."
+                "Your 12-month NSF Project Pitch limit (from Oct 30, 2026) has officially reset! Submit a brand-new "
+                "deep-tech R&D Project Pitch on the NSF Seed Fund Portal (https://nsfgov.my.site.com/mywork/s/)."
             ),
-            "alert_days_before": [7, 3, 1, 0, -5],
+            "alert_days_before": [7, 1, 0],
             "daily_during_window": False,
         },
         {
@@ -41,7 +41,7 @@ def get_deadlines(today: datetime.date):
                 "Open Grants.gov (PA-27-100). The 30-day window (Dec 6, 2026 – Jan 5, 2027) is OPEN! "
                 "Submit all 6 upgraded NIH SBIR Phase I grants from 3_NIH_SBIR_Federal_Grants."
             ),
-            "alert_days_before": [14, 7, 3, 2, 1, 0],
+            "alert_days_before": [7, 3, 2, 1, 0],
             "daily_during_window": True,
         },
         {
@@ -209,10 +209,7 @@ def run_watchdog(force_summary: bool = False):
             )
             state[alert_key] = True
 
-    is_monday_heartbeat = (today.weekday() == 0 and not state.get(f"monday_{today_str}"))
-    is_monthly_briefing = (today.day == 1 and not state.get(f"monthly_{today_str}"))
-
-    if force_summary or urgent_alerts or is_monday_heartbeat or is_monthly_briefing:
+    if force_summary or urgent_alerts:
         msg_parts = [
             f"🏛️ <b>SD GOVERNMENT SOLUTIONS LLC — 24/7 CLOUD COMPLIANCE, PERMIT &amp; TAX WATCHDOG (@SDGOV_bot)</b>",
             f"📅 <b>Date:</b> {today.strftime('%A, %B %d, %Y')}",
@@ -233,10 +230,6 @@ def run_watchdog(force_summary: bool = False):
         )
 
         send_telegram("\n".join(msg_parts))
-        if is_monday_heartbeat:
-            state[f"monday_{today_str}"] = True
-        if is_monthly_briefing:
-            state[f"monthly_{today_str}"] = True
         try:
             with open(STATE_FILE, "w", encoding="utf-8") as f:
                 json.dump(state, f, indent=2)
