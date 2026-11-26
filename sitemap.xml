@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
     <loc>https://kidspeechai.com/</loc>
-    <lastmod>2026-11-25</lastmod>
+    <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <video:video>
@@ -16,21 +16,57 @@
   </url>
   <url>
     <loc>https://kidspeechai.com/blog/</loc>
-    <lastmod>2026-11-25</lastmod>
+    <lastmod>2026-11-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://kidspeechai.com/privacy.html</loc>
-    <lastmod>2026-11-25</lastmod>
+    <lastmod>2026-11-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://kidspeechai.com/terms.html</loc>
-    <lastmod>2026-11-25</lastmod>
+    <lastmod>2026-11-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://kidspeechai.com/blog/2026-11-26-potty-training-words-and-bathroom-routine-phrases-potty-pee-poop-flush-wash-hands-for-toddlers.html</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kidspeechai.com/blog/2026-11-26-fringe-vocabulary-vs-core-words-examples-for-toddlers-how-to-pair-power-verbs-with-favorite-toys.html</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kidspeechai.com/blog/2026-11-26-cause-and-effect-pop-up-toys-buttons-and-spinners-speech-games-push-spin-pop-open-for-late-talkers.html</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kidspeechai.com/blog/2026-11-26-ai-speech-recognition-and-voice-activated-speech-games-for-kids-ages-1-to-5-parent-guide.html</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kidspeechai.com/blog/2026-11-26-22-month-old-not-putting-two-words-together-yet-the-verb-plus-noun-bridge-for-toddlers.html</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kidspeechai.com/blog/2026-11-26-18-month-old-vocabulary-checklist-10-to-50-words-and-how-to-reach-100-first-words-at-home.html</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://kidspeechai.com/blog/2026-11-25-why-toddlers-point-and-grunt-eh-eh-instead-of-saying-words-and-the-3-choice-prompt-fix.html</loc>
